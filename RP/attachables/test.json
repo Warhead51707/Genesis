@@ -1,0 +1,40 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "hell:test",
+      "item": {
+        "hell:test": "query.owner_identifier == 'minecraft:player' || query.owner_identifier == 'minecraft:zombie'"
+      },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/t_1",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "animations": {
+        "necklace": "animation.necklace.loop",
+        "necklace_zombie": "animation.necklace.zombie"
+      },
+      "geometry": {
+        "default": "geometry.warhead.necklace"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          {
+            "necklace": "!c.is_first_person && query.owner_identifier == 'minecraft:player'"
+          },
+          {
+            "necklace_zombie": "!c.is_first_person && query.owner_identifier != 'minecraft:player'"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.armor"
+      ]
+    }
+  }
+}

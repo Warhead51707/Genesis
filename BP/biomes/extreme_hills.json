@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:biome": {
+		"description": {
+			"identifier": "extreme_hills"
+		},
+
+		"components": {
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					["medium", 0],
+					["cold", 0]
+				]
+			}
+		}
+	}
+}

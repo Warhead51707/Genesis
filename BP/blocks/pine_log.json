@@ -1,0 +1,66 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:pine_log",
+			"properties": {
+				"minecraft:direction": {}
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 9999,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:explosion_resistance": 10000,
+			"minecraft:geometry": "geometry.block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "pine_log",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotate",
+				"target": "self"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('minecraft:direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('minecraft:direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('minecraft:direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"events": {
+			"rotate": {
+				"set_block_property": {
+					"minecraft:direction": "math.floor(query.block_face/2)"
+				}
+			}
+		}
+	}
+}

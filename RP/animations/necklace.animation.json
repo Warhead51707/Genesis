@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.necklace.loop": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [
+						0,
+						12.5,
+						-0.5
+					]
+				}
+			}
+		},
+		"animation.necklace.zombie": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [
+						0,
+						19.5,
+						-0.5
+					]
+				}
+			}
+		}
+	}
+}

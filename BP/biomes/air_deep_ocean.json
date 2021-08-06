@@ -1,0 +1,63 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "air_deep_ocean"
+		},
+		"components": {
+			"minecraft:surface_parameters": {
+				"foundation_material": "hell:fake_stone",
+				"top_material": "minecraft:grass",
+				"mid_material": "hell:fake_stone",
+				"sea_material": "minecraft:water",
+				"sea_floor_material": "minecraft:gravel",
+				"sea_floor_depth": 5
+			},
+			"minecraft:overworld_height": {
+				"noise_type": "default"
+			},
+			"minecraft:multinoise_generation_rules": {
+				"target_temperature": 0.0,
+				"target_humidity": -0.4,
+				"target_altitude": 0.0,
+				"target_weirdness": 0.4,
+				"weight": 0.1
+			},
+			"minecraft:climate": {
+				"downfall": 0.4,
+				"snow_accumulation": [
+					0,
+					0
+				],
+				"temperature": 0.25
+			},
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					[
+						"frozen",
+						1
+					],
+					[
+						"cold",
+						1
+					],
+					[
+						"medium",
+						1
+					],
+					[
+						"lukewarm",
+						1
+					],
+					[
+						"warm",
+						1
+					]
+				]
+			},
+			"deep": {},
+			"ocean": {},
+			"overworld": {}
+		}
+	}
+}

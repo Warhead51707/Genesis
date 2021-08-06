@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:biome": {
+		"description": {
+			"identifier": "mushroom_island"
+		},
+
+		"components": {
+			"ocean": {}
+		}
+	}
+}

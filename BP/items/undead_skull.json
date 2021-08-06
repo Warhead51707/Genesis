@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hell:undead_skull",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "undead_skull"
+			},
+			"minecraft:display_name": {
+				"value": "Undead Skull\n[§1RARE§r]\n\n§d20 Damage boost against undead mobs"
+			},
+			"minecraft:armor": {
+				"protection": 0
+			},
+			"tag:hell:undead_skull": {},
+			"minecraft:wearable": {
+				"slot": "slot.armor.feet"
+			}
+		}
+	}
+}

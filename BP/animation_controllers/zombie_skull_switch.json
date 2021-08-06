@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie.skull_switch": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "skull_score": "query.scoreboard('skull') == 2"
+                        }
+                    ],
+                    "on_entry": [
+                        "/event entity @e[type=zombie] hell:zombie_skull_switch_remove"
+                    ]
+                },
+                "skull_score": {
+                    "on_entry": [
+                        "/event entity @e[type=zombie] hell:zombie_skull_switch"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.scoreboard('skull') == 1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

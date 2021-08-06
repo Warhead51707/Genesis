@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.skull_band": {
+			"loop": true,
+			"bones": {
+				"band": {
+					"rotation": [
+						0,
+						-90,
+						0
+					],
+					"position": [
+						6.95,
+						16,
+						-6.2
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "hell:undead_skull",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"item": {
+				"hell:undead_skull": "query.owner_identifier == 'minecraft:player'"
+			},
+			"animations": {
+				"skull_band": "animation.skull_band"
+			},
+			"textures": {
+				"default": "textures/models/armor/undead_skull_band",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.skull_band"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;",
+				"animate": [
+					{
+						"skull_band": "!c.is_first_person"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.armor"
+			]
+		}
+	}
+}

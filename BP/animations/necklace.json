@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.necklace": {
+            "animation_length": 0.1,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/effect @s regeneration 5 1 true"
+                ]
+            }
+        }
+    }
+}

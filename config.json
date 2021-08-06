@@ -1,0 +1,13 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Genesis",
+	"namespace": "hell",
+	"author": "Warhead",
+	"targetVersion": "1.17.0",
+	"description": "Created by Warhead",
+	"capabilities": [],
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	}
+}

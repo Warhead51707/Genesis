@@ -1,0 +1,40 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Genesis (An RPG Adventure)",
+		"description": "Created by Warhead",
+		"min_engine_version": [
+			1,
+			17,
+			0
+		],
+		"uuid": "350a7f9d-e930-4d06-b685-963f19d43348",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "Created by Warhead",
+			"type": "data",
+			"uuid": "dd19ea6e-25b8-411c-8450-9b2932a8fe3a",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "a5b31ab1-b87c-48cd-8994-cb4bca2b8cf0",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Hellfire",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"witherrack_top": {
+			"textures": "textures/blocks/witherrack_top"
+		},
+		"witherrack_side": {
+			"textures": "textures/blocks/witherrack_side"
+		},
+		"fake_stone": {
+			"textures": "textures/blocks/stone"
+		},
+		"pine_log": {
+			"textures": "textures/blocks/pine_log"
+		}
+	}
+}

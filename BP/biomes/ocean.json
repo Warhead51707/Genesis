@@ -1,0 +1,19 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:biome": {
+		"description": {
+			"identifier": "ocean"
+		},
+
+		"components": {
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					["medium", 0]
+				],
+
+				"hills_transformation": "ocean"
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "hell:house_rule",
+			"places_feature": "hell:house"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			]
+		},
+		"distribution": {
+			"iterations": "math.floor(v.originx / 16) == 6 && math.floor(v.originz / 16) == 6",
+			"x": 4,
+			"y": "query.heightmap(v.worldx, v.worldz) - 6",
+			"z": 4
+		}
+	}
+}

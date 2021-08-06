@@ -1,0 +1,33 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.skull": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "scoreboard_skull": "query.equipped_item_any_tag('slot.armor.feet', 'hell:undead_skull')"
+                        }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @e[type=zombie] skull 1"
+                    ]
+                },
+                "scoreboard_skull": {
+                    "transitions": [
+                        {
+                            "default": "!query.equipped_item_any_tag('slot.armor.feet', 'hell:undead_skull')"
+                        }
+                    ],
+                    "animations": [
+                        "skull_score"
+                    ],
+                    "on_exit": [
+                        "/scoreboard players set @e[type=zombie] skull 1"
+                    ]
+                }
+            }
+        }
+    }
+}

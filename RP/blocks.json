@@ -1,0 +1,22 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"hell:witherrack": {
+		"sound": "nylium",
+		"textures": {
+			"up": "witherrack_top",
+			"side": "witherrack_side",
+			"down": "netherrack"
+		}
+	},
+	"hell:fake_stone": {
+		"sound": "stone",
+		"textures": "fake_stone"
+	},
+	"hell:pine_log": {
+		"sound": "wood"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:biome": {
+		"description": {
+			"identifier": "ice_plains"
+		},
+
+		"components": {
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					["frozen", 0]
+				]
+			}
+		}
+	}
+}

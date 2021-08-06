@@ -1,0 +1,24 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:beards_and_shavers": {
+        "description": {
+            "identifier": "hell:house_beard"
+        },
+        "places_feature": "hell:house",
+        "bounding_box_min": [
+            -6,
+            0,
+            -11
+        ],
+        "bounding_box_max": [
+            -5,
+            5,
+            -10
+        ],
+        "surface_block_type": "minecraft:grass",
+        "subsurface_block_type": "hell:fake_stone",
+        "beard_raggedness_min": 0.1,
+        "beard_raggedness_max": 0.3,
+        "y_delta": 2
+    }
+}

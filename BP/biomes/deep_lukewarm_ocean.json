@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:biome": {
+		"description": {
+			"identifier": "deep_lukewarm_ocean"
+		},
+
+		"components": {
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					["lukewarm", 0]
+				]
+			}
+		}
+	}
+}

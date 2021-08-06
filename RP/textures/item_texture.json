@@ -1,0 +1,12 @@
+{
+	"resource_pack_name": "Hellfire",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"hell_test": {
+			"textures": "textures/items/hell_test"
+		},
+		"undead_skull": {
+			"textures": "textures/items/skull_undead"
+		}
+	}
+}

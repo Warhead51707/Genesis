@@ -1,0 +1,46 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "hell:plains_surface_trees_feature",
+      "places_feature": "hell:pine_tree_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "air"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "ocean"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": "math.floor(v.originx / 16) != 6 && math.floor(v.originz / 16) != 6 && math.random(2, 3)",
+      "x": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          12
+        ]
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": {
+        "distribution": "gaussian",
+        "extent": [
+          0,
+          14
+        ]
+      }
+    }
+  }
+}

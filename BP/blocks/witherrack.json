@@ -1,0 +1,20 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:witherrack"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 3,
+			"minecraft:block_light_emission": 0,
+			"minecraft:breakonpush": false,
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:friction": 0.5,
+			"minecraft:on_interact": {
+				"event": "give_mana"
+			}
+		}
+	}
+}
