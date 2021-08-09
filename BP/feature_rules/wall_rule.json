@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "hell:wall_rule",
+			"places_feature": "hell:wall"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			]
+		},
+		"distribution": {
+			"iterations": "math.floor(v.originx / 16) == 9 && math.floor(v.originz / 16) == 6",
+			"x": 6,
+			"y": "query.heightmap(v.worldx, v.worldz) - 1",
+			"z": 4
+		}
+	}
+}

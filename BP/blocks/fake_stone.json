@@ -5,7 +5,7 @@
 			"identifier": "hell:fake_stone"
 		},
 		"components": {
-			"minecraft:destroy_time": 100,
+			"minecraft:destroy_time": 1000,
 			"minecraft:explosion_resistance": 9999
 		}
 	}

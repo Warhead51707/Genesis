@@ -1,0 +1,33 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:town_block_start"
+		},
+		"components": {
+			"minecraft:ticking": {
+				"looping": false,
+				"on_tick": {
+					"event": "town",
+					"target": "self"
+				},
+				"range": [
+					9999,
+					9999
+				]
+			}
+		},
+		"events": {
+			"town": {
+				"run_command": {
+					"command": [
+						"structure load main:town_wall ~ ~-4 ~"
+					]
+				},
+				"set_block": {
+					"block_type": "air"
+				}
+			}
+		}
+	}
+}
