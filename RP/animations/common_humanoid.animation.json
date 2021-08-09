@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.common_humanoid.move.arms": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-(math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+				}
+			}
+		},
+		"animation.common_humanoid.move.legs": {
+			"loop": true,
+			"bones": {
+				"leftLeg": {
+					"rotation": ["-(math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+				}
+			}
+		},
+		"animation.common_humanoid.attack.rotations": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, "Math.sin(360*Math.sqrt(variable.attack_time)) * 5.0", 0]
+				},
+				"leftArm": {
+					"rotation": ["-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 10.0", 0, 0]
+				}
+			}
+		},
+		"animation.common_humanoid.attack.positions": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, 0, 0]
+				}
+			}
+		}
+	}
+}
