@@ -7,6 +7,9 @@
 		},
 		"undead_skull": {
 			"textures": "textures/items/skull_undead"
+		},
+		"hell_wand": {
+			"textures": "textures/items/wand"
 		}
 	}
 }
