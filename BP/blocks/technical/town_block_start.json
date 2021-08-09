@@ -21,7 +21,7 @@
 			"town": {
 				"run_command": {
 					"command": [
-						"structure load main:town_wall ~ ~-4 ~"
+						"structure load main:town_wall_f ~ ~-10 ~"
 					]
 				},
 				"set_block": {
