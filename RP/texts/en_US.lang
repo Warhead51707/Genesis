@@ -1,7 +1,3 @@
 itemGroup.name.boots=Accessories
 tile.hell:witherrack.name=Witherrack
 item.hell:wand=Wand
-
-## Fake Blocks
-tile.hell:fake_stone.name=Fake Stone
-tile.hell:fake_cobblestone.name=Fake Cobblestone
