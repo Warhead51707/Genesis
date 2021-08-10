@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "hell:rock_b",
+			"places_feature": "hell:rock_b"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 0.2,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					8
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz)",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					8
+				]
+			}
+		}
+	}
+}

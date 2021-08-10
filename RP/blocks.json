@@ -18,5 +18,9 @@
 	},
 	"hell:pine_log": {
 		"sound": "wood"
+	},
+	"hell:fake_cobblestone": {
+		"textures": "fake_cobblestone",
+		"sound": "stone"
 	}
 }

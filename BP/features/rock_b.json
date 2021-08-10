@@ -1,0 +1,18 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "hell:rock_b"
+        },
+        "structure_name": "rocks:rock_b",
+        "adjustment_radius": 3,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {},
+            "unburied": {},
+            "block_intersection": {
+                "block_allowlist": []
+            }
+        }
+    }
+}

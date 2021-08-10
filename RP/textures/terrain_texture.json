@@ -15,6 +15,9 @@
 		},
 		"pine_log": {
 			"textures": "textures/blocks/pine_log"
+		},
+		"fake_cobblestone": {
+			"textures": "textures/blocks/cobblestone"
 		}
 	}
 }

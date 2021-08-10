@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "hell:fake_cobblestone"
+    },
+    "components": {
+      "minecraft:destroy_time": 1000,
+      "minecraft:explosion_resistance": 9999
+    }
+  }
+}
