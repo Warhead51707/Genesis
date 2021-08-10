@@ -2,3 +2,6 @@
 
 #skull band
 scoreboard objectives add skull dummy skull
+
+#spellbook scoreboard
+scoreboard objectives add spellbook dummy spellbook
