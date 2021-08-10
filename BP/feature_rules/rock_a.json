@@ -17,7 +17,7 @@
 		},
 		"distribution": {
 			"iterations": 1,
-			"x": 10
+			"x": 10,
 			"y": "query.heightmap(variable.worldx, variable.worldz)",
 			"z": 5
 		}
