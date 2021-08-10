@@ -1,3 +1,4 @@
+//bridge-file-version: #0
 {
 	"format_version": "1.16.100",
 	"minecraft:entity": {
@@ -33,8 +34,8 @@
 				},
 				"minecraft:timer": {
 					"time": [
-						0.0,
-						0.0
+						0,
+						0
 					],
 					"looping": false,
 					"time_down_event": {

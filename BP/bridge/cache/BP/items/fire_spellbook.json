@@ -1,0 +1,250 @@
+{
+	"file_path": "C:\\Users\\kiere\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Genesis BP\\items\\fire_spellbook.json",
+	"file_type": "item",
+	"format_version": 1,
+	"file_uuid": "88c93695_3fc6_4ce6_9ea4_68e1811cae43",
+	"file_version": 2,
+	"cache_content": {
+		"children": [
+			{
+				"data": "1.16.100",
+				"key": "format_version"
+			},
+			{
+				"open": {
+					"format_version": "1.16.100",
+					"minecraft:item": {
+						"description": {
+							"identifier": "hell:fire_spellbook"
+						},
+						"components": {
+							"minecraft:use_duration": 30,
+							"minecraft:food": {
+								"can_always_eat": true,
+								"on_consume": {
+									"event": "done"
+								}
+							},
+							"minecraft:icon": {
+								"texture": "hell_fire_spellbook"
+							},
+							"minecraft:render_offsets": "apple"
+						},
+						"events": {
+							"done": {
+								"run_command": {
+									"command": [
+										"scoreboard players add @s spellbook 1"
+									]
+								}
+							}
+						}
+					}
+				},
+				"key": "minecraft:item",
+				"children": [
+					{
+						"open": {
+							"description": {
+								"identifier": "hell:fire_spellbook"
+							},
+							"components": {
+								"minecraft:use_duration": 30,
+								"minecraft:food": {
+									"can_always_eat": true,
+									"on_consume": {
+										"event": "done"
+									}
+								},
+								"minecraft:icon": {
+									"texture": "hell_fire_spellbook"
+								},
+								"minecraft:render_offsets": "apple"
+							},
+							"events": {
+								"done": {
+									"run_command": {
+										"command": [
+											"scoreboard players add @s spellbook 1"
+										]
+									}
+								}
+							}
+						},
+						"key": "description",
+						"is_minified": true,
+						"children": {
+							"identifier": "hell:fire_spellbook"
+						}
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "hell:fire_spellbook"
+							},
+							"components": {
+								"minecraft:use_duration": 30,
+								"minecraft:food": {
+									"can_always_eat": true,
+									"on_consume": {
+										"event": "done"
+									}
+								},
+								"minecraft:icon": {
+									"texture": "hell_fire_spellbook"
+								},
+								"minecraft:render_offsets": "apple"
+							},
+							"events": {
+								"done": {
+									"run_command": {
+										"command": [
+											"scoreboard players add @s spellbook 1"
+										]
+									}
+								}
+							}
+						},
+						"key": "components",
+						"children": [
+							{
+								"open": {
+									"minecraft:use_duration": 30,
+									"minecraft:food": {
+										"can_always_eat": true,
+										"on_consume": {
+											"event": "done"
+										}
+									},
+									"minecraft:icon": {
+										"texture": "hell_fire_spellbook"
+									},
+									"minecraft:render_offsets": "apple"
+								},
+								"data": "30",
+								"key": "minecraft:use_duration"
+							},
+							{
+								"open": {
+									"minecraft:use_duration": 30,
+									"minecraft:food": {
+										"can_always_eat": true,
+										"on_consume": {
+											"event": "done"
+										}
+									},
+									"minecraft:icon": {
+										"texture": "hell_fire_spellbook"
+									},
+									"minecraft:render_offsets": "apple"
+								},
+								"key": "minecraft:food",
+								"is_minified": true,
+								"children": {
+									"can_always_eat": true,
+									"on_consume": {
+										"event": "done"
+									}
+								}
+							},
+							{
+								"open": {
+									"minecraft:use_duration": 30,
+									"minecraft:food": {
+										"can_always_eat": true,
+										"on_consume": {
+											"event": "done"
+										}
+									},
+									"minecraft:icon": {
+										"texture": "hell_fire_spellbook"
+									},
+									"minecraft:render_offsets": "apple"
+								},
+								"key": "minecraft:icon",
+								"is_minified": true,
+								"children": {
+									"texture": "hell_fire_spellbook"
+								}
+							},
+							{
+								"data": "apple",
+								"key": "minecraft:render_offsets"
+							}
+						]
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "hell:fire_spellbook"
+							},
+							"components": {
+								"minecraft:use_duration": 30,
+								"minecraft:food": {
+									"can_always_eat": true,
+									"on_consume": {
+										"event": "done"
+									}
+								},
+								"minecraft:icon": {
+									"texture": "hell_fire_spellbook"
+								},
+								"minecraft:render_offsets": "apple"
+							},
+							"events": {
+								"done": {
+									"run_command": {
+										"command": [
+											"scoreboard players add @s spellbook 1"
+										]
+									}
+								}
+							}
+						},
+						"key": "events",
+						"children": [
+							{
+								"open": {
+									"done": {
+										"run_command": {
+											"command": [
+												"scoreboard players add @s spellbook 1"
+											]
+										}
+									}
+								},
+								"key": "done",
+								"children": [
+									{
+										"open": {
+											"run_command": {
+												"command": [
+													"scoreboard players add @s spellbook 1"
+												]
+											}
+										},
+										"key": "run_command",
+										"children": [
+											{
+												"open": {
+													"command": [
+														"scoreboard players add @s spellbook 1"
+													]
+												},
+												"key": "command",
+												"is_minified": true,
+												"children": [
+													"scoreboard players add @s spellbook 1"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
