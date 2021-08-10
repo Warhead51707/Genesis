@@ -6,7 +6,7 @@
       "places_feature": "hell:pine_tree_feature"
     },
     "conditions": {
-      "placement_pass": "first_pass",
+      "placement_pass": "final_pass",
       "minecraft:biome_filter": [
         {
           "any_of": [

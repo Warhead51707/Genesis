@@ -10,6 +10,12 @@
 		},
 		"hell_wand": {
 			"textures": "textures/items/wand"
+		},
+		"bridge_fire_spellbook": {
+			"textures": "textures/items/fire_spellbook"
+		},
+		"hell_fire_spellbook": {
+			"textures": "textures/items/fire_spellbook"
 		}
 	}
 }
