@@ -2,5 +2,5 @@
 itemGroup.name.boots=Accessories
 tile.hell:witherrack.name=Witherrack
 item.hell:wand=Wand
-
+entity.hell:deer.name=Deer
 item.hell:fire_spellbook=Fire spellbook  [§1RARE§r]§d20  Research takes 30 seconds
