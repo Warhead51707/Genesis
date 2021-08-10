@@ -6,7 +6,7 @@
 			"places_feature": "hell:wall"
 		},
 		"conditions": {
-			"placement_pass": "final_pass",
+			"placement_pass": "first_pass",
 			"minecraft:biome_filter": [
 				{
 					"test": "has_biome_tag",
