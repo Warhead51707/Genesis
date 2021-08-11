@@ -1,3 +1,51 @@
 {
-	"sound_definitions": {}
+	"sound_definitions": {
+		"mob.wandering_skeleton_trader.death": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/death"
+			]
+		},
+		"mob.wandering_skeleton_trader.haggle": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/haggle1",
+				"sounds/mob/villager/haggle2",
+				"sounds/mob/villager/haggle3"
+			]
+		},
+		"mob.wandering_skeleton_trader.hit": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/hit1",
+				"sounds/mob/villager/hit2",
+				"sounds/mob/villager/hit3",
+				"sounds/mob/villager/hit4"
+			]
+		},
+		"mob.wandering_skeleton_trader.idle": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/idle1",
+				"sounds/mob/villager/idle2",
+				"sounds/mob/villager/idle3"
+			]
+		},
+		"mob.wandering_skeleton_trader.no": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/no1",
+				"sounds/mob/villager/no2",
+				"sounds/mob/villager/no3"
+			]
+		},
+		"mob.wandering_skeleton_trader.yes": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/villager/yes1",
+				"sounds/mob/villager/yes2",
+				"sounds/mob/villager/yes3"
+			]
+		}
+	}
 }
