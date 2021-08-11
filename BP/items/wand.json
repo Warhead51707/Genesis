@@ -3,12 +3,13 @@
   "minecraft:item": {
     "description": {
       "identifier": "hell:wand",
-      "category": "nature"
+      "category": "equipment"
     },
     "components": {
       "minecraft:icon": {
         "texture": "hell_wand"
-      }
+      },
+      "minecraft:hand_equipped": true
     }
   }
 }
