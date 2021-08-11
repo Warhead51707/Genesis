@@ -16,6 +16,9 @@
 		},
 		"hell_fire_spellbook": {
 			"textures": "textures/items/fire_spellbook"
+		},
+		"hell_wandering_skeleton_trader_egg": {
+			"textures": "textures/items/wandering_skeleton_trader"
 		}
 	}
 }

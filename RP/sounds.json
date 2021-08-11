@@ -1,1 +1,22 @@
-{}
+{
+	"entity_sounds": {
+		"entities": {
+			"hell:wandering_skeleton_trader": {
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": "mob.wandering_skeleton_trader.idle",
+					"hurt": "mob.wandering_skeleton_trader.hit",
+					"death": "mob.wandering_skeleton_trader.death",
+					"death.to.zombie": "mob.wandering_skeleton_trader.death",
+					"haggle": "mob.wandering_skeleton_trader.haggle",
+					"haggle.yes": "mob.wandering_skeleton_trader.yes",
+					"haggle.no": "mob.wandering_skeleton_trader.no"
+				}
+			}
+		}
+	}
+}
