@@ -5,26 +5,26 @@
             {
                 "scene_tag": "wandering_skeleton_trader",
                 "npc_name": "Gray",
-                "text": "What you want? Got any thing of value for little old me?",
+                "text": "Got anything of value for me?",
                 "on_open_commands": [],
                 "on_close_commands": [
-                    "/say Now get out of my sight!"
+                    "/say Come back with more gold next time!"
                 ],
                 "buttons": [
                     {
-                        "name": "I got a little something.",
+                        "name": "Yes",
                         "commands": [
-                            "/give @initiator gold_ingot"
+                            "/say I don't see anything of value."
                         ]
                     },
                     {
-                        "name": "Just stopping by.",
+                        "name": "No",
                         "commands": [
-                            "/give @initiator iron_ingot"
+                            "/say I got nothing for you then."
                         ]
                     },
                     {
-                        "name": "What items are you looking for?",
+                        "name": "Maybe",
                         "commands": [
                             "/give @initiator diamond"
                         ]
