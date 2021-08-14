@@ -11,7 +11,7 @@
 				"texture": "undead_skull"
 			},
 			"minecraft:display_name": {
-				"value": "Undead Skull\n[§1RARE§r]\n\n§d20 Damage boost against undead mobs"
+				"value": "Undead Skull\n[§1RARE§f]\n\n§d20 Damage boost against undead mobs"
 			},
 			"minecraft:armor": {
 				"protection": 0

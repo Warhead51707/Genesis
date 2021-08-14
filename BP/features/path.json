@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "simple_path:path"
+		},
+
+		"places_feature": "simple_path:path_floor",
+
+		"iterations": "t.chunkpathintersection_x_size = t.chunkpathintersection_terminus_x - t.chunkpathintersection_origin_x; t.chunkpathintersection_z_size = t.chunkpathintersection_terminus_z - t.chunkpathintersection_origin_z; return t.chunkpathintersection_x_size * t.chunkpathintersection_z_size;",
+
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.chunkpathintersection_x_size - 1"]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.chunkpathintersection_z_size - 1"]
+		},
+		"y": "query.heightmap(v.worldx, v.worldz) - 1"
+	}
+}

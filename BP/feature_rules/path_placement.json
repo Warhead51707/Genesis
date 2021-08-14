@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "simple_path:path_placement",
+			"places_feature": "simple_path:path"
+		},
+		"conditions": {
+			"placement_pass": "first_pass"
+		},
+		"distribution": {
+			"iterations": "t.directions_east = 0; t.directions_south = 1; t.directions_west = 2; t.directions_north = 3; t.chunk_origin_x = math.floor(v.originx / 16) * 16; t.chunk_origin_z = math.floor(v.originz / 16) * 16; t.chunk_terminus_x = t.chunk_origin_x + 16; t.chunk_terminus_z = t.chunk_origin_z + 16; t.path_origin_x = 80; t.path_origin_z = 100; t.path_direction = t.directions_east; t.path_length = 50; t.path_width = 4; t.path_halfwidth = t.path_width / 2; t.path_direction == t.directions_east ? { t.path_area_origin_x = t.path_origin_x; t.path_area_origin_z = t.path_origin_z - t.path_halfwidth; t.path_area_terminus_x = t.path_origin_x + t.path_length; t.path_area_terminus_z = t.path_origin_z + t.path_halfwidth; }; t.path_direction == t.directions_south ? { t.path_area_origin_x = t.path_origin_x - t.path_halfwidth; t.path_area_origin_z = t.path_origin_z; t.path_area_terminus_x = t.path_origin_x + t.path_halfwidth; t.path_area_terminus_z = t.path_origin_z + t.path_length; }; t.path_direction == t.directions_west ? { t.path_area_origin_x = t.path_origin_x - t.path_length; t.path_area_origin_z = t.path_origin_z - t.path_halfwidth; t.path_area_terminus_x = t.path_origin_x; t.path_area_terminus_z = t.path_origin_z + t.path_halfwidth; }; t.path_direction == t.directions_north ? { t.path_area_origin_x = t.path_origin_x - t.path_halfwidth; t.path_area_origin_z = t.path_origin_z - t.path_length; t.path_area_terminus_x = t.path_origin_x + t.path_halfwidth; t.path_area_terminus_z = t.path_origin_z; }; t.chunkpathintersection_origin_x = math.max( t.chunk_origin_x, t.path_area_origin_x ) ; t.chunkpathintersection_origin_z = math.max( t.chunk_origin_z, t.path_area_origin_z ) ; t.chunkpathintersection_terminus_x = math.min( t.chunk_terminus_x, t.path_area_terminus_x ) ; t.chunkpathintersection_terminus_z = math.min( t.chunk_terminus_z, t.path_area_terminus_z ) ; t.chunkpathintersection_origin_x < t.chunkpathintersection_terminus_x && t.chunkpathintersection_origin_z < t.chunkpathintersection_terminus_z ? { return 1; };",
+			"x": "t.chunkpathintersection_origin_x - t.chunk_origin_x",
+			"z": "t.chunkpathintersection_origin_z - t.chunk_origin_z",
+			"y": 0
+		}
+	}
+}
