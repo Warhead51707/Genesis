@@ -5,9 +5,16 @@
 	"author": "Warhead",
 	"targetVersion": "1.17.0",
 	"description": "Created by Warhead",
-	"capabilities": [],
 	"packs": {
 		"behaviorPack": "./BP",
 		"resourcePack": "./RP"
+	},
+	"experimentalGameplay": {
+		"enableGameTestFramework": false,
+		"additionalModdingCapabilities": false,
+		"cavesAndCliffs": true,
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": true,
+		"upcomingCreatorFeatures": true
 	}
 }

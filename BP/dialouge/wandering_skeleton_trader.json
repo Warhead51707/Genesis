@@ -1,0 +1,36 @@
+{
+    "format_version": "1.14.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "wandering_skeleton_trader",
+                "npc_name": "Gray",
+                "text": "What you want? Got any thing of value for little old me?",
+                "on_open_commands": [],
+                "on_close_commands": [
+                    "/say Now get out of my sight!"
+                ],
+                "buttons": [
+                    {
+                        "name": "I got a little something.",
+                        "commands": [
+                            "/give @initiator gold_ingot"
+                        ]
+                    },
+                    {
+                        "name": "Just stopping by.",
+                        "commands": [
+                            "/give @initiator iron_ingot"
+                        ]
+                    },
+                    {
+                        "name": "What items are you looking for?",
+                        "commands": [
+                            "/give @initiator diamond"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

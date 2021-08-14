@@ -7,29 +7,7 @@
 			"is_summonable": true,
 			"is_experimental": false
 		},
-		"component_groups": {
-			"good": {
-				"minecraft:economy_trade_table": {
-					"display_name": "Good wandering_skeleton_trader",
-					"table": "trading/economy_trades/wandering_skeleton_trader_good.json",
-					"new_screen": true
-				}
-			},
-			"better": {
-				"minecraft:economy_trade_table": {
-					"display_name": "Better wandering_skeleton_trader",
-					"table": "trading/economy_trades/wandering_skeleton_trader_better.json",
-					"new_screen": true
-				}
-			},
-			"best": {
-				"minecraft:economy_trade_table": {
-					"display_name": "Best wandering_skeleton_trader",
-					"table": "trading/economy_trades/wandering_skeleton_trader_best.json",
-					"new_screen": true
-				}
-			}
-		},
+		"component_groups": {},
 		"components": {
 			"minecraft:type_family": {
 				"family": [
@@ -77,17 +55,6 @@
 			"minecraft:can_climb": {},
 			"minecraft:behavior.float": {
 				"priority": 0
-			},
-			"minecraft:behavior.trade_with_player": {
-				"priority": 1
-			},
-			"minecraft:behavior.trade_interest": {
-				"priority": 3,
-				"within_radius": 6,
-				"interest_time": 45,
-				"remove_item_time": 1,
-				"carried_item_switch_time": 2,
-				"cooldown": 2
 			},
 			"minecraft:behavior.look_at_trading_player": {
 				"priority": 2
@@ -138,65 +105,9 @@
 			"minecraft:pushable": {
 				"is_pushable": true,
 				"is_pushable_by_piston": true
-			}
-		},
-		"events": {
-			"minecraft:entity_spawned": {
-				"randomize": [
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"good"
-							]
-						}
-					},
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"better"
-							]
-						}
-					},
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"best"
-							]
-						}
-					}
-				]
 			},
-			"minecraft:entity_transformed": {
-				"randomize": [
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"good"
-							]
-						}
-					},
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"better"
-							]
-						}
-					},
-					{
-						"weight": 5,
-						"add": {
-							"component_groups": [
-								"best"
-							]
-						}
-					}
-				]
-			}
-		}
+			"minecraft:npc": {}
+		},
+		"events": {}
 	}
 }
