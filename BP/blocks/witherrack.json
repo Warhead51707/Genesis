@@ -11,10 +11,7 @@
 			"minecraft:destroy_time": 9999,
 			"minecraft:explosion_resistance": 9999,
 			"minecraft:loot": "loot_tables/empty.json",
-			"minecraft:friction": 0.5,
-			"minecraft:on_interact": {
-				"event": "give_mana"
-			}
+			"minecraft:friction": 0.5
 		}
 	}
 }

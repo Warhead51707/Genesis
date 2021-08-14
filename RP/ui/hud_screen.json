@@ -1403,7 +1403,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            300,
+            250,
             30
           ],
           "color": "$tool_tip_text",

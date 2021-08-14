@@ -1,0 +1,1 @@
+tellraw @s[scores={fire=0..1}] {"rawtext":[{"text":"§eYou've already learned this spell"}]}

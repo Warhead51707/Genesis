@@ -13,23 +13,27 @@
 			"minecraft:display_name": {
 				"value": "Spellbook \n[§eSPELLBOOK§f]\n\n§dThe book has a small fire inscription on it..."
 			},
-			"minecraft:food": {
-				"can_always_eat": false,
-				"on_consume": {
-					"event": "done",
-					"target": "self"
+			"minecraft:max_stack_size": 1,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "done"
 				}
-			},
-			"minecraft:max_stack_size": 1
+			}
 		},
 		"events": {
 			"done": {
-				"run_command": {
-					"command": [
-						"scoreboard players add @s spellbook 1",
-						"say Done"
-					]
-				}
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"scoreboard players remove @s[scores={fire=2..1000}] fire 1",
+								"effect @s[scores={fire=2..1000}] slowness 1 2 true",
+								"function magic/fire_tellraw"
+							],
+							"target": "holder"
+						}
+					}
+				]
 			}
 		}
 	}
