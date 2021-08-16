@@ -111,17 +111,10 @@
 					}
 				]
 			},
-			"minecraft:entity_born": {
-				"add": {
-					"component_groups": [
-						"minecraft:cow_baby"
-					]
-				}
-			},
 			"minecraft:ageable_grow_up": {
 				"remove": {
 					"component_groups": [
-						"minecraft:cow_baby"
+						"hell:deer_baby"
 					]
 				}
 			}
