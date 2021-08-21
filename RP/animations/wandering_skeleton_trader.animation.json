@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wandering_skeleton_trader.offer": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4,
+			"bones": {
+				"leftArm": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.36": {
+							"post": [-67.5, -22.5, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"leftItem": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.36": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

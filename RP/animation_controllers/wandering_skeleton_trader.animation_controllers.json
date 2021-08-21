@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.wandering_skeleton_trader": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        {
+                            "move_arms": "query.modified_move_speed"
+                        },
+                        {
+                            "move_legs": "query.modified_move_speed"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "offer": "query.variant == 1"
+                        }
+                    ]
+                },
+                "offer": {
+                    "animations": [
+                        "offer",
+                        "move_legs"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.variant == 0"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

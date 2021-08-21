@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hell:wandering_skeleton_trader",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/wandering_skeleton_trader"
+			},
+			"geometry": {
+				"default": "geometry.wandering_skeleton_trader"
+			},
+			"animations": {
+				"move_arms": "animation.common_humanoid.move.arms",
+				"move_legs": "animation.common_humanoid.move.legs",
+				"look_at_target": "animation.common.look_at_target",
+				"bob": "animation.humanoid.bob",
+				"offer": "animation.wandering_skeleton_trader.offer",
+				"setup": "controller.animation.wandering_skeleton_trader"
+			},
+			"scripts": {
+				"animate": [
+					"setup"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#cac4a1",
+				"overlay_color": "#213753"
+			}
+		}
+	}
+}
