@@ -3,6 +3,7 @@ gamerule commandblockoutput false
 gamerule sendcommandfeedback false
 scoreboard objectives add mana dummy mana
 scoreboard objectives add fire dummy fire
+scoreboard objectives add s_pouch dummy s_pouch
 
 #Player spawn setup
 tp @a[tag=!joined] 100 ~1000 100
@@ -11,6 +12,7 @@ gamerule dodaylightcycle false
 execute @a[tag=!joined] ~ ~ ~ setworldspawn ~ ~ ~
 scoreboard players set @a[tag=!joined] mana 10
 scoreboard players set @a[tag=!joined] fire 100
+scoreboard players set @a[tag=!joined] s_pouch 0
 tag @a add joined
 
 #Mana UI logic

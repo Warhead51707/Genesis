@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hell:small_pouch_entityrr",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/deer"
+			},
+			"geometry": {
+				"default": "geometry.deer"
+			},
+			"animations": {
+				"walk": "animation.quadruped.walk",
+				"base_pose": "animation.deer.base_pose",
+				"is_baby": "animation.deer.is_baby"
+			},
+			"scripts": {
+				"animate": [
+					"base_pose",
+					{
+						"is_baby": "query.is_baby"
+					},
+					{
+						"walk": "query.modified_move_speed"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#7d5010",
+				"overlay_color": "#570b0b"
+			}
+		}
+	}
+}

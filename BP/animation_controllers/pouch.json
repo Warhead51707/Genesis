@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.pouch": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "pouch_walk": "query.get_equipped_item_name == 'small_pouch'"
+                        }
+                    ]
+                },
+                "pouch_walk": {
+                    "transitions": [
+                        {
+                            "default": "query.get_equipped_item_name != 'small_pouch'"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tp @e[type=hell:small_pouch_entity, scores={s_pouch=100}] 0 0 0"
+                    ],
+                    "animations": [
+                        "pouch_tp"
+                    ]
+                }
+            }
+        }
+    }
+}

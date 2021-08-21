@@ -1,0 +1,50 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.small_pouch_north": {
+            "animation_length": 0.01,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/function misc/small_pouch_setup_north"
+                ]
+            }
+        },
+        "animation.small_pouch_south": {
+            "animation_length": 0.01,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/function misc/small_pouch_setup_south"
+                ]
+            }
+        },
+        "animation.small_pouch_east": {
+            "animation_length": 0.01,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/function misc/small_pouch_setup_east"
+                ]
+            }
+        },
+        "animation.small_pouch_west": {
+            "animation_length": 0.01,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/function misc/small_pouch_setup_west"
+                ]
+            }
+        },
+        "animation.small_pouch": {
+            "animation_length": 0.1,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/function misc/small_pouch_setup"
+                ]
+            }
+        }
+    }
+}

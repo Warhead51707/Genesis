@@ -19,6 +19,9 @@
 		},
 		"hell_wandering_skeleton_trader_egg": {
 			"textures": "textures/items/wandering_skeleton_trader"
+		},
+		"small_pouch": {
+			"textures": "textures/items/small_pouch"
 		}
 	}
 }

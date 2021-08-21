@@ -1,0 +1,53 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:small_pouch_entity",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:collision_box": {
+				"height": 3,
+				"width": 1
+			},
+			"minecraft:inventory": {
+				"additional_slots_per_strength": 0,
+				"can_be_siphoned_from": false,
+				"container_type": "hopper",
+				"inventory_size": 5,
+				"private": false,
+				"restrict_to_owner": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"damage_multiplier": 0,
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true,
+				"radius": 10000,
+				"distance_to_players": 10000000
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"pouch"
+				]
+			}
+		},
+		"events": {}
+	}
+}

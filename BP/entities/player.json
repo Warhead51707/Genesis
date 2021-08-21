@@ -9,14 +9,21 @@
 			"animations": {
 				"necklace": "animation.necklace",
 				"skull": "controller.animation.player.skull",
-				"skull_score": "animation.skull.scoreboard"
+				"skull_score": "animation.skull.scoreboard",
+				"pouch": "controller.animation.pouch",
+				"pouch_tp": "animation.small_pouch",
+				"pouch_tp_south": "animation.small_pouch_south",
+				"pouch_tp_east": "animation.small_pouch_east",
+				"pouch_tp_west": "animation.small_pouch_west",
+				"pouch_tp_north": "animation.small_pouch_north"
 			},
 			"scripts": {
 				"animate": [
 					{
 						"necklace": "query.equipped_item_any_tag('slot.armor.feet','hell:necklace_regen')&&query.mark_variant==2"
 					},
-					"skull"
+					"skull",
+					"pouch"
 				]
 			}
 		},
@@ -149,7 +156,8 @@
 			"minecraft:rideable": {
 				"seat_count": 2,
 				"family_types": [
-					"parrot_tame"
+					"parrot_tame",
+					"pouch"
 				],
 				"pull_in_entities": true,
 				"seats": [

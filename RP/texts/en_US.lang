@@ -6,3 +6,5 @@ entity.hell:deer.name=Deer
 item.hell:fire_spellbook=Fire spellbook  [§1RARE§r]§d20  Research takes 30 seconds
 item.spawn_egg.entity.hell:wandering_skeleton_trader.name=Spawn Wandering Skeleton Trader
 entity.hell:wandering_skeleton_trader.name=Wandering Skeleton Trader
+entity.hell:small_pouch_entity.name=Small Pouch
+tile.hell:small_pouch.name=Small Pouch
