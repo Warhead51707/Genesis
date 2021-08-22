@@ -1,0 +1,36 @@
+{
+    "format_version": "1.14.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "wandering_skeleton_trader",
+                "npc_name": "Gray",
+                "text": "Got anything of value for me?",
+                "on_open_commands": [],
+                "on_close_commands": [
+                    "/say Come back with more gold next time!"
+                ],
+                "buttons": [
+                    {
+                        "name": "Yes",
+                        "commands": [
+                            "/say I don't see anything of value."
+                        ]
+                    },
+                    {
+                        "name": "No",
+                        "commands": [
+                            "/say I got nothing for you then."
+                        ]
+                    },
+                    {
+                        "name": "Maybe",
+                        "commands": [
+                            "/give @initiator diamond"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
