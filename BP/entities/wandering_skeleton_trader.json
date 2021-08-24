@@ -11,8 +11,7 @@
 		"components": {
 			"minecraft:type_family": {
 				"family": [
-					"wandering_skeleton_trader",
-					"mob"
+					"wandering_skeleton_trader"
 				]
 			},
 			"minecraft:breathable": {
@@ -20,8 +19,8 @@
 				"suffocate_time": 0
 			},
 			"minecraft:health": {
-				"value": 20,
-				"max": 20
+				"value": 100,
+				"max": 100
 			},
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [
@@ -38,8 +37,8 @@
 				]
 			},
 			"minecraft:collision_box": {
-				"width": 0.6,
-				"height": 1.9
+				"width": 0.7,
+				"height": 1.75
 			},
 			"minecraft:movement": {
 				"value": 0.5
@@ -56,42 +55,13 @@
 			"minecraft:behavior.float": {
 				"priority": 0
 			},
-			"minecraft:behavior.look_at_trading_player": {
-				"priority": 2
-			},
 			"minecraft:behavior.panic": {
 				"priority": 1,
 				"speed_multiplier": 0.6
 			},
-			"minecraft:behavior.avoid_mob_type": {
-				"priority": 2,
-				"entity_types": [
-					{
-						"filters": {
-							"any_of": [
-								{
-									"test": "is_family",
-									"subject": "other",
-									"value": "iron_golem"
-								}
-							]
-						},
-						"walk_speed_multiplier": 0.6,
-						"sprint_speed_multiplier": 0.6
-					}
-				],
-				"max_dist": 6
-			},
-			"minecraft:behavior.restrict_open_door": {
-				"priority": 5
-			},
 			"minecraft:behavior.open_door": {
 				"priority": 6,
 				"close_door_after": true
-			},
-			"minecraft:behavior.move_towards_restriction": {
-				"priority": 7,
-				"speed_multiplier": 0.6
 			},
 			"minecraft:behavior.look_at_player": {
 				"priority": 8,
@@ -106,7 +76,16 @@
 				"is_pushable": true,
 				"is_pushable_by_piston": true
 			},
-			"minecraft:npc": {}
+			"minecraft:npc": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "d"
+						}
+					}
+				]
+			}
 		},
 		"events": {}
 	}
