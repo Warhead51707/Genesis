@@ -1,0 +1,15 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.crossbow_holding_animation": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "crossbow_hold"
+                    ]
+                }
+            }
+        }
+    }
+}
