@@ -1,0 +1,21 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:tankard_block"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:geometry": "geometry.tankard",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tankard_block",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

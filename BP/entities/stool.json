@@ -1,0 +1,76 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:stool",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"hell:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:rideable": {
+				"seats": [
+					{
+						"position": [
+							-0.02,
+							0.25,
+							-0.2
+						]
+					}
+				],
+				"seat_count": 1,
+				"family_types": [
+					"player"
+				]
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"any_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 0
+									}
+								]
+							}
+						],
+						"event": "despawn",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:health": {
+				"max": 0.5,
+				"value": 0.5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"hell:despawn"
+					]
+				}
+			}
+		}
+	}
+}

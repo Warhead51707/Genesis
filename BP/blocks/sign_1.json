@@ -1,0 +1,21 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:sign_1"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:geometry": "geometry.sign_1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sign_1",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999
+		}
+	}
+}

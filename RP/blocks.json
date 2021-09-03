@@ -18,5 +18,14 @@
 	},
 	"hell:pine_log": {
 		"sound": "wood"
+	},
+	"hell:sign_1": {
+		"sound": "wood"
+	},
+	"hell:stool_1": {
+		"sound": "wood"
+	},
+	"hell:tankard_block": {
+		"sound": "wood"
 	}
 }

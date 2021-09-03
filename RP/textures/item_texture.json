@@ -22,6 +22,9 @@
 		},
 		"small_pouch": {
 			"textures": "textures/items/small_pouch"
+		},
+		"tankard": {
+			"textures": "textures/items/tankard"
 		}
 	}
 }

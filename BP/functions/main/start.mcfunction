@@ -29,14 +29,14 @@ title @a[scores={mana=9,fire=2..100}, m=!c] actionbar 
 title @a[scores={mana=10,fire=2..100}, m=!c] actionbar 
 
 #Fire Spell activated
-title @a[scores={fire=0..1,mana=0}, m=!c] actionbar   
-title @a[scores={fire=0..1,mana=1}, m=!c] actionbar    
-title @a[scores={fire=0..1,mana=2}, m=!c] actionbar      
-title @a[scores={fire=0..1,mana=3}, m=!c] actionbar      
-title @a[scores={fire=0..1,mana=4}, m=!c] actionbar   
-title @a[scores={fire=0..1,mana=5}, m=!c] actionbar   
-title @a[scores={fire=0..1,mana=6}, m=!c] actionbar     
-title @a[scores={fire=0..1,mana=7}, m=!c] actionbar        
-title @a[scores={fire=0..1,mana=8}, m=!c] actionbar   
-title @a[scores={fire=0..1,mana=9}, m=!c] actionbar     
-title @a[scores={fire=0..1,mana=10}, m=!c] actionbar   
+title @a[scores={fire=-1..1,mana=0}, m=!c] actionbar   
+title @a[scores={fire=-1..1,mana=1}, m=!c] actionbar    
+title @a[scores={fire=-1..1,mana=2}, m=!c] actionbar      
+title @a[scores={fire=-1..1,mana=3}, m=!c] actionbar      
+title @a[scores={fire=-1..1,mana=4}, m=!c] actionbar   
+title @a[scores={fire=-1..1,mana=5}, m=!c] actionbar   
+title @a[scores={fire=-1..1,mana=6}, m=!c] actionbar     
+title @a[scores={fire=-1..1,mana=7}, m=!c] actionbar        
+title @a[scores={fire=-1..1,mana=8}, m=!c] actionbar   
+title @a[scores={fire=-1..1,mana=9}, m=!c] actionbar     
+title @a[scores={fire=-1..1,mana=10}, m=!c] actionbar   

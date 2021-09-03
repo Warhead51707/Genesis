@@ -15,6 +15,15 @@
 		},
 		"pine_log": {
 			"textures": "textures/blocks/pine_log"
+		},
+		"sign_1": {
+			"textures": "textures/blocks/sign_1"
+		},
+		"stool": {
+			"textures": "textures/blocks/stool"
+		},
+		"tankard_block": {
+			"textures": "textures/blocks/tankard_block"
 		}
 	}
 }

@@ -2,7 +2,6 @@
 	"type": "minecraftBedrock",
 	"name": "Genesis",
 	"namespace": "hell",
-	"author": "Warhead",
 	"targetVersion": "1.17.0",
 	"description": "Created by Warhead",
 	"packs": {
@@ -16,5 +15,8 @@
 		"holidayCreatorFeatures": true,
 		"creationOfCustomBiomes": true,
 		"upcomingCreatorFeatures": true
-	}
+	},
+	"authors": [
+		"Warhead"
+	]
 }

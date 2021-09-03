@@ -1,0 +1,46 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:stool_1"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:geometry": "geometry.stool",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stool",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					14,
+					12
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "ride"
+			}
+		},
+		"events": {
+			"ride": {
+				"run_command": {
+					"command": [
+						"summon hell:stool ~ ~ ~",
+						"execute @e[c=1,type=hell:stool] ~ ~ ~ ride @p start_riding @s teleport_rider"
+					]
+				}
+			}
+		}
+	}
+}
