@@ -2,7 +2,15 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hell:tankard_block"
+			"identifier": "hell:tankard_block",
+			"properties": {
+				"hell:block_rotation": [
+					1,
+					2,
+					3,
+					4
+				]
+			}
 		},
 		"components": {
 			"minecraft:block_light_absorption": 0,
@@ -14,6 +22,73 @@
 				"*": {
 					"texture": "tankard_block",
 					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-2,
+					0,
+					-2
+				],
+				"size": [
+					4,
+					5,
+					4
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-2,
+					0,
+					-2
+				],
+				"size": [
+					4,
+					5,
+					4
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotate",
+				"target": "self"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('hell:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"rotate": {
+				"set_block_property": {
+					"hell:block_rotation": "query.cardinal_facing_2d"
 				}
 			}
 		}

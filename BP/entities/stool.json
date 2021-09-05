@@ -12,6 +12,11 @@
 			}
 		},
 		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"stool"
+				]
+			},
 			"minecraft:rideable": {
 				"seats": [
 					{
@@ -68,6 +73,11 @@
 				"add": {
 					"component_groups": [
 						"hell:despawn"
+					]
+				},
+				"run_command": {
+					"command": [
+						"fill ~ ~ ~ ~ ~4 ~ air 0 replace hell:tavern_path"
 					]
 				}
 			}

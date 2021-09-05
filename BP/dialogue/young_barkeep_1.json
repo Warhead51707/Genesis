@@ -1,0 +1,82 @@
+{
+    "format_version": "1.14.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "young_barkeep_1",
+                "npc_name": "Barkeep",
+                "text": "Hey! Welcome to Ol' James' Tavern, how can I serve you?",
+                "on_open_commands": [],
+                "on_close_commands": [],
+                "buttons": [
+                    {
+                        "name": "Buy Ale (3H)",
+                        "commands": [
+                            "/execute @p[scores={currency=3..}] ~ ~ ~ scoreboard players set @p temp1 1",
+                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players remove @p currency 3",
+                            "/give @p[scores={temp1=1}] hell:tankard",
+                            "/execute @p[scores={temp1=1}] ~ ~ ~ say Here you are.",
+                            "/execute @p[scores={currency=0..2}] ~ ~ ~ say That's not enough."
+                        ]
+                    },
+                    {
+                        "name": "History?",
+                        "commands": [
+                            "/say Placeholder"
+                        ]
+                    },
+                    {
+                        "name": "Who are you?",
+                        "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_intro"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "young_barkeep_1_intro",
+                "npc_name": "William",
+                "text": "Well, I'm William I manage the Tavern for my father, James. I've lived here for all my life. I've seen people come and go.. live and die but, this Tavern has always been apart of me.",
+                "buttons": [
+                    {
+                        "name": "Alright.",
+                        "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_after_intro",
+                            "/tag @initiator add has_intro_barkeep_1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "young_barkeep_1_after_intro",
+                "npc_name": "William",
+                "text": "So mate, how can I serve you?",
+                "buttons": [
+                    {
+                        "name": "Buy Ale (3H)",
+                        "commands": [
+                            "/execute @p[scores={currency=0..2}] ~ ~ ~ say I don't have enough.",
+                            "/execute @p[scores={currency=3..}] ~ ~ ~ scoreboard players set @p temp1 1",
+                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players remove @p currency 3",
+                            "/give @p[scores={temp1=1}] hell:tankard",
+                            "/execute @p[scores={temp1=1}] ~ ~ ~ function NPC/young_barkeep_1/ale_buy",
+                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players set @p temp1 0"
+                        ]
+                    },
+                    {
+                        "name": "History?",
+                        "commands": [
+                            "/say Placeholder"
+                        ]
+                    },
+                    {
+                        "name": "Tell me more.",
+                        "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_intro"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

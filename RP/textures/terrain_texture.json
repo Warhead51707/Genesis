@@ -24,6 +24,9 @@
 		},
 		"tankard_block": {
 			"textures": "textures/blocks/tankard_block"
+		},
+		"tavern_path": {
+			"textures": "textures/blocks/tavern_path"
 		}
 	}
 }

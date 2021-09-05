@@ -8,3 +8,4 @@ item.spawn_egg.entity.hell:wandering_skeleton_trader.name=Spawn Wandering Skelet
 entity.hell:wandering_skeleton_trader.name=Wandering Skeleton Trader
 entity.hell:small_pouch_entity.name=Small Pouch
 tile.hell:small_pouch.name=Small Pouch
+npcscreen.npc= 

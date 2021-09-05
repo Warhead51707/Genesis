@@ -31,8 +31,7 @@
 			},
 			"minecraft:tick_world": {
 				"never_despawn": true,
-				"radius": 10000,
-				"distance_to_players": 10000000
+				"radius": 6
 			},
 			"minecraft:persistent": {},
 			"minecraft:physics": {

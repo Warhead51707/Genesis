@@ -1,0 +1,139 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:young_barkeep_1",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"NPC",
+					"barkeep"
+				]
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": false
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:health": {
+				"value": 100,
+				"max": 100
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:movement": {
+				"value": 0.7
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"avoid_water": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:behavior.float": {
+				"priority": 6
+			},
+			"minecraft:behavior.panic": {
+				"priority": 3,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 2,
+				"look_distance": 10,
+				"probability": 10
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:behavior.move_to_block": {
+				"priority": 0,
+				"start_chance": 1,
+				"stay_duration": 10,
+				"speed_multiplier": 0.4,
+				"search_range": 10,
+				"target_blocks": [
+					"hell:tavern_path"
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:npc": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "d",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 3,
+				"within_radius": 6,
+				"reselect_targets": false,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								}
+							]
+						},
+						"must_see": false,
+						"attack_interval": 1
+					}
+				]
+			},
+			"minecraft:follow_range": {
+				"max": 10,
+				"value": 10
+			},
+			"minecraft:behavior.move_towards_target": {
+				"priority": 4,
+				"speed_multiplier": 0.4,
+				"within_radius": 10
+			}
+		},
+		"events": {
+			"d": {
+				"run_command": {
+					"command": [
+						"execute @e[type=hell:young_barkeep_1] ~ ~ ~ function NPC/young_barkeep_1"
+					]
+				}
+			}
+		}
+	}
+}

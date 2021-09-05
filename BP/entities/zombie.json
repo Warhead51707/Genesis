@@ -171,7 +171,6 @@
         "can_break_doors": true
       },
       "minecraft:annotation.break_door": {},
-      "minecraft:jump.static": {},
       "minecraft:can_climb": {},
       "minecraft:health": {
         "value": 20,

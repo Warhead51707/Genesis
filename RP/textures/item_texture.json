@@ -25,6 +25,9 @@
 		},
 		"tankard": {
 			"textures": "textures/items/tankard"
+		},
+		"coin": {
+			"textures": "textures/items/coin"
 		}
 	}
 }

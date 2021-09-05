@@ -37,7 +37,8 @@
 				"run_command": {
 					"command": [
 						"summon hell:stool ~ ~ ~",
-						"execute @e[c=1,type=hell:stool] ~ ~ ~ ride @p start_riding @s teleport_rider"
+						"execute @e[c=1,type=hell:stool] ~ ~ ~ ride @p start_riding @s teleport_rider",
+						"fill ~ ~1 ~ ~ ~1 ~ hell:tavern_path 0 replace air"
 					]
 				}
 			}
