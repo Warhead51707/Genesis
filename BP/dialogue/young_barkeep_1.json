@@ -12,11 +12,7 @@
                     {
                         "name": "Buy Ale (3H)",
                         "commands": [
-                            "/execute @p[scores={currency=3..}] ~ ~ ~ scoreboard players set @p temp1 1",
-                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players remove @p currency 3",
-                            "/give @p[scores={temp1=1}] hell:tankard",
-                            "/execute @p[scores={temp1=1}] ~ ~ ~ say Here you are.",
-                            "/execute @p[scores={currency=0..2}] ~ ~ ~ say That's not enough."
+                            "/function NPC/young_barkeep_1/ale_buy"
                         ]
                     },
                     {
@@ -28,7 +24,7 @@
                     {
                         "name": "Who are you?",
                         "commands": [
-                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_intro"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_intro"
                         ]
                     }
                 ]
@@ -41,8 +37,8 @@
                     {
                         "name": "Alright.",
                         "commands": [
-                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_after_intro",
-                            "/tag @initiator add has_intro_barkeep_1"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_after_intro",
+                            "/tag @initiator[c=1] add has_intro_barkeep_1"
                         ]
                     }
                 ]
@@ -55,12 +51,7 @@
                     {
                         "name": "Buy Ale (3H)",
                         "commands": [
-                            "/execute @p[scores={currency=0..2}] ~ ~ ~ say I don't have enough.",
-                            "/execute @p[scores={currency=3..}] ~ ~ ~ scoreboard players set @p temp1 1",
-                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players remove @p currency 3",
-                            "/give @p[scores={temp1=1}] hell:tankard",
-                            "/execute @p[scores={temp1=1}] ~ ~ ~ function NPC/young_barkeep_1/ale_buy",
-                            "/execute @p[scores={temp1=1}] ~ ~ ~ scoreboard players set @p temp1 0"
+                            "/function NPC/young_barkeep_1/ale_buy"
                         ]
                     },
                     {
@@ -72,8 +63,24 @@
                     {
                         "name": "Tell me more.",
                         "commands": [
-                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator young_barkeep_1_intro"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_extra_info"
                         ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "young_barkeep_1_extra_info",
+                "npc_name": "William",
+                "text": "Well. As I told you previously, my name is William, Willam Beckett and my father he owns this Tavern. I won't make you go on a meaningless quest, but I have heard some commotion of an enemy force closing in. Please, ask around if you get the chance.",
+                "buttons": [
+                    {
+                        "name": "Thanks.",
+                        "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_after_intro"
+                        ]
+                    },
+                    {
+                        "name": "Goodbye"
                     }
                 ]
             }
