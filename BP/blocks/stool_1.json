@@ -29,18 +29,31 @@
 				]
 			},
 			"minecraft:on_interact": {
-				"event": "ride"
+				"event": "ride",
+				"target": "self"
 			}
 		},
 		"events": {
 			"ride": {
-				"run_command": {
-					"command": [
-						"summon hell:stool ~ ~ ~",
-						"execute @e[c=1,type=hell:stool] ~ ~ ~ ride @p start_riding @s teleport_rider",
-						"fill ~ ~1 ~ ~ ~1 ~ hell:tavern_path 0 replace air"
-					]
-				}
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon hell:stool ~ ~ ~",
+								"fill ~ ~1 ~ ~ ~1 ~ hell:tavern_path 0 replace air"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"ride @s start_riding @e[type=hell:stool,r=2,c=1] teleport_rider"
+							],
+							"target": "other"
+						}
+					}
+				]
 			}
 		}
 	}
