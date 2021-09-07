@@ -1,0 +1,56 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.table",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "table",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 11, -8], "size": [16, 3, 16], "inflate": 0.1, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "leg0",
+					"parent": "table",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [5, 0, 5], "size": [2, 11, 2], "uv": [8, 19]}
+					]
+				},
+				{
+					"name": "leg1",
+					"parent": "table",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [5, 0, -7], "size": [2, 11, 2], "uv": [8, 19]}
+					]
+				},
+				{
+					"name": "leg2",
+					"parent": "table",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 0, -7], "size": [2, 11, 2], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "leg3",
+					"parent": "table",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 0, 5], "size": [2, 11, 2], "uv": [0, 19]}
+					]
+				}
+			]
+		}
+	]
+}
