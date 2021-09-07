@@ -48,7 +48,7 @@
 					{
 						"run_command": {
 							"command": [
-								"ride @s start_riding @e[type=hell:stool,r=2,c=1] teleport_rider"
+								"ride @s start_riding @e[type=hell:stool,c=1] teleport_rider"
 							],
 							"target": "other"
 						}

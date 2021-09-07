@@ -8,7 +8,8 @@ execute @p[scores={temp1=1},c=1] ~ ~ ~ scoreboard players remove @s currency 3
 #Give ale
 give @p[scores={temp1=1},c=1] hell:tankard
 
-#Conditional end message
+#Conditional end messages
+execute @p[c=1,tag=young_barkeep_1_has_extra_info,scores={temp1=1}] ~ ~ ~ tellraw @s {"rawtext":[{"text":"[William] Here you are, "},{"selector":"@s"},{"text":"."}]}
 execute @p[c=1,tag=has_intro_barkeep_1,scores={temp1=1}] ~ ~ ~ tellraw @s {"rawtext":[{"text":"[William] Here you are, "},{"selector":"@s"},{"text":"."}]}
 execute @p[c=1,tag=!has_intro_barkeep_1,scores={temp1=1}] ~ ~ ~ tellraw @s {"rawtext":[{"text":"[Barkeep] Here you are."}]}
 

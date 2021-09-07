@@ -130,8 +130,9 @@
 			"d": {
 				"run_command": {
 					"command": [
-						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[c=1,tag=!has_intro_barkeep_1] young_barkeep_1",
-						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[tag=has_intro_barkeep_1,c=1] young_barkeep_1_after_intro"
+						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[c=1,tag=!has_intro_barkeep_1,tag=!young_barkeep_1_has_extra_info] young_barkeep_1",
+						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[tag=has_intro_barkeep_1,c=1] young_barkeep_1_after_intro",
+						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[tag=young_barkeep_1_has_extra_info,c=1] young_barkeep_1_after_extra"
 					],
 					"target": "other"
 				}
