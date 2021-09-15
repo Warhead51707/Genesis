@@ -27,5 +27,11 @@
 	},
 	"hell:tankard_block": {
 		"sound": "wood"
+	},
+	"hell:table_1": {
+		"sound": "wood"
+	},
+	"hell:mini_table": {
+		"sound": "wood"
 	}
 }

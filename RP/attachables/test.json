@@ -4,7 +4,7 @@
     "description": {
       "identifier": "hell:test",
       "item": {
-        "hell:test": "query.owner_identifier == 'minecraft:player' || query.owner_identifier == 'minecraft:zombie'"
+        "hell:test": "query.owner_identifier == 'minecraft:player' || query.owner_identifier != 'minecraft:player'"
       },
       "materials": {
         "default": "armor",

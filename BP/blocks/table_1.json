@@ -1,0 +1,73 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:table_1",
+			"properties": {
+				"hell:table": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:destroy_time": 9999,
+			"minecraft:geometry": "geometry.table",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "spruce_table"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "state_switch",
+				"condition": "query.is_sneaking"
+			}
+		},
+		"events": {
+			"state_switch": {
+				"set_block_property": {
+					"hell:table": "(query.block_property('hell:table')<5) ? query.block_property('hell:table') + 1 : 1"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('hell:table') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.table1"
+				}
+			},
+			{
+				"condition": "query.block_property('hell:table') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.table2"
+				}
+			},
+			{
+				"condition": "query.block_property('hell:table') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.table3"
+				}
+			},
+			{
+				"condition": "query.block_property('hell:table') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.table4"
+				}
+			},
+			{
+				"condition": "query.block_property('hell:table') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.table5"
+				}
+			}
+		]
+	}
+}

@@ -29,8 +29,10 @@
 				],
 				"seat_count": 1,
 				"family_types": [
-					"player"
-				]
+					"player",
+					"NPC"
+				],
+				"pull_in_entities": true
 			},
 			"minecraft:collision_box": {
 				"height": 0,

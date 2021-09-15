@@ -27,6 +27,12 @@
 		},
 		"tavern_path": {
 			"textures": "textures/blocks/tavern_path"
+		},
+		"spruce_table": {
+			"textures": "textures/blocks/spruce_table"
+		},
+		"mini_table": {
+			"textures": "textures/blocks/mini_table"
 		}
 	}
 }
