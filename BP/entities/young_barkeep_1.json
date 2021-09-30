@@ -73,7 +73,7 @@
 			"minecraft:behavior.move_to_block": {
 				"priority": 0,
 				"start_chance": 1,
-				"stay_duration": 10,
+				"stay_duration": 2,
 				"speed_multiplier": 0.4,
 				"search_range": 10,
 				"target_blocks": [

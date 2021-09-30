@@ -1,19 +1,15 @@
 {
-	"format_version": "1.17.0",
+	"format_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "hell:stool",
+			"identifier": "hell:stool_other",
 			"is_summonable": true,
-			"is_spawnable": true,
+			"is_spawnable": false,
 			"animations": {
 				"stool_despawn_animation": "animation.stool_despawn"
 			},
 			"scripts": {
-				"animate": [
-					{
-						"stool_despawn_animation": "!query.has_rider"
-					}
-				]
+				"animate": []
 			}
 		},
 		"component_groups": {
@@ -33,13 +29,12 @@
 						"position": [
 							-0.02,
 							0.25,
-							-0.2
+							0
 						]
 					}
 				],
 				"seat_count": 1,
 				"family_types": [
-					"player",
 					"NPC"
 				],
 				"pull_in_entities": true,
@@ -62,7 +57,7 @@
 				]
 			},
 			"minecraft:block_sensor": {
-				"sensor_radius": 0.5,
+				"sensor_radius": 1,
 				"on_break": [
 					{
 						"block_list": [

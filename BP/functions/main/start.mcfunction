@@ -1,11 +1,14 @@
 #This function is for game setup. DO NOT TOUCH IF YOU DONT UNDERSTAND THIS!
 gamerule commandblockoutput false
-gamerule sendcommandfeedback false
+#gamerule sendcommandfeedback true
 scoreboard objectives add mana dummy mana
 scoreboard objectives add fire dummy fire
 scoreboard objectives add s_pouch dummy s_pouch
 scoreboard objectives add currency dummy currency
 scoreboard objectives add temp1 dummy temp1
+
+#Dev - Will be removed in production build ;)
+scoreboard objectives add chair_counter dummy chair_counter
 
 #Player spawn setup
 tp @a[tag=!joined] 100 ~1000 100

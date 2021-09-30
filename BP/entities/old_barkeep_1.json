@@ -5,9 +5,58 @@
 			"identifier": "hell:old_barkeep_1",
 			"is_spawnable": true,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+			"animations": {
+				"sit_reset": "animation.sit_reset",
+				"sit_counter": "animation.sit_counter"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"sit_reset": "query.variant == 1 && !query.is_riding"
+					},
+					{
+						"sit_counter": "query.is_riding && query.varient == 1"
+					}
+				]
+			}
 		},
-		"component_groups": {},
+		"component_groups": {
+			"tavern_mode": {
+				"minecraft:behavior.move_to_block": {
+					"priority": 0,
+					"start_chance": 10,
+					"stay_duration": 5,
+					"speed_multiplier": 1.3,
+					"search_range": 40,
+					"on_reach": [
+						{
+							"event": "tavern_sit",
+							"target": "self"
+						}
+					],
+					"target_blocks": [
+						"hell:stool_1"
+					],
+					"target_selection_method": "random",
+					"goal_radius": 1,
+					"on_stay_completed": [
+						{
+							"event": "tavern_sit",
+							"target": "self"
+						}
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"spawned": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
 		"components": {
 			"minecraft:type_family": {
 				"family": [
@@ -45,7 +94,7 @@
 				"height": 1.8
 			},
 			"minecraft:movement": {
-				"value": 0.5
+				"value": 0.2
 			},
 			"minecraft:navigation.walk": {
 				"can_path_over_water": true,
@@ -59,10 +108,10 @@
 			},
 			"minecraft:behavior.panic": {
 				"priority": 3,
-				"speed_multiplier": 0.2
+				"speed_multiplier": 1.1
 			},
 			"minecraft:behavior.look_at_player": {
-				"priority": 3,
+				"priority": 2,
 				"look_distance": 4,
 				"probability": 10
 			},
@@ -84,18 +133,52 @@
 						}
 					}
 				]
-			},
-			"minecraft:behavior.random_stroll": {
-				"priority": 2
 			}
 		},
 		"events": {
 			"d": {
+				"add": {
+					"component_groups": [
+						"tavern_mode"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"spawned"
+					]
+				}
+			},
+			"tavern_sit": {
 				"run_command": {
 					"command": [
-						"/say Placeholder"
+						"ride @s start_riding @e[type=hell:stool_other,c=1] teleport_rider"
 					],
-					"target": "other"
+					"target": "self"
+				},
+				"remove": {
+					"component_groups": [
+						"tavern_mode"
+					]
+				}
+			},
+			"tavern_reset_chair_path": {
+				"remove": {
+					"component_groups": [
+						"tavern_mode",
+						"spawned"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"tavern_mode"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"spawned"
+					]
 				}
 			}
 		}

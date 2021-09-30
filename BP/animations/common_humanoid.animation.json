@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.humanoid.riding.legs": {
+			"loop": true,
+			"bones": {
+				"leftLeg": {
+					"rotation": ["-72.0 - this", "24.5 - this", "-this"]
+				},
+				"rightLeg": {
+					"rotation": ["-72.0 - this", "-17 - this", "-this"]
+				}
+			}
+		}
+	}
+}

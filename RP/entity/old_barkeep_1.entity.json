@@ -15,13 +15,21 @@
 			"animations": {
 				"move_arms": "animation.common_humanoid.move.arms",
 				"move_legs": "animation.common_humanoid.move.legs",
-				"look_at_target": "animation.common.look_at_target"
+				"look_at_target": "animation.common.look_at_target",
+				"riding_arms": "animation.humanoid.riding.arms",
+				"riding_legs": "animation.common_humanoid.riding.legs"
 			},
 			"scripts": {
 				"animate": [
 					"move_arms",
 					"move_legs",
-					"look_at_target"
+					"look_at_target",
+					{
+						"riding_arms": "query.is_riding"
+					},
+					{
+						"riding_legs": "query.is_riding"
+					}
 				]
 			},
 			"render_controllers": [

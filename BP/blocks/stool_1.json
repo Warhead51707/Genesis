@@ -6,8 +6,7 @@
 			"properties": {
 				"hell:stool": [
 					0,
-					1,
-					2
+					1
 				]
 			}
 		},
@@ -31,7 +30,19 @@
 				],
 				"size": [
 					12,
-					14,
+					11,
+					12
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					11,
 					12
 				]
 			},
@@ -42,6 +53,17 @@
 			"minecraft:on_player_placing": {
 				"condition": "query.is_sneaking",
 				"event": "switch_state"
+			},
+			"minecraft:ticking": {
+				"looping": false,
+				"range": [
+					0.01,
+					0.01
+				],
+				"on_tick": {
+					"event": "ride_other",
+					"target": "self"
+				}
 			}
 		},
 		"events": {
@@ -90,13 +112,59 @@
 				"set_block_property": {
 					"hell:stool": 1
 				}
+			},
+			"ride_other": {
+				"sequence": [
+					{
+						"condition": "query.block_property('hell:stool') == 1",
+						"run_command": {
+							"command": [
+								"summon hell:stool_other ~ ~-0.5 ~"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"condition": "!query.block_property('hell:stool')",
+						"run_command": {
+							"command": [
+								"summon hell:stool_other ~ ~-0.7 ~"
+							],
+							"target": "self"
+						}
+					}
+				]
 			}
 		},
 		"permutations": [
 			{
 				"condition": "query.block_property('hell:stool') == 1",
 				"components": {
-					"minecraft:geometry": "geometry.tall_stool"
+					"minecraft:geometry": "geometry.tall_stool",
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							14,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							14,
+							12
+						]
+					}
 				}
 			}
 		]

@@ -15,7 +15,31 @@
 				}
 			},
 			"minecraft:destroy_time": 9999,
-			"minecraft:explosion_resistance": 9999
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					16,
+					14
+				]
+			}
 		}
 	}
 }
