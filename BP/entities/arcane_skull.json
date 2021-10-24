@@ -1,0 +1,41 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:arcane_skull",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:collision_box": {
+				"height": 3,
+				"width": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"damage_multiplier": 0,
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"NPC",
+					"Arcane"
+				]
+			}
+		},
+		"events": {}
+	}
+}

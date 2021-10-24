@@ -1,0 +1,274 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:chair_1",
+			"properties": {
+				"hell:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:geometry": "geometry.chair_1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chair",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					10,
+					14
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					10,
+					14
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "ride",
+				"target": "self"
+			},
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotate",
+				"target": "self"
+			},
+			"minecraft:ticking": {
+				"looping": false,
+				"range": [
+					0.01,
+					0.01
+				],
+				"on_tick": {
+					"event": "ride_other",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"ride": {
+				"sequence": [
+					{
+						"condition": "query.block_property('hell:block_rotation') == 5",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair ~ ~ ~",
+										"tp @e[family=stool,c=1] ~ ~ ~ 90"
+									],
+									"target": "self"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+									],
+									"target": "other"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 2",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair ~ ~ ~"
+									],
+									"target": "self"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+									],
+									"target": "other"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 4",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair ~ ~ ~",
+										"tp @e[family=stool,c=1] ~ ~ ~ 270"
+									],
+									"target": "self"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+									],
+									"target": "other"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 3",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair ~ ~ ~",
+										"tp @e[family=stool,c=1] ~ ~ ~ 180"
+									],
+									"target": "self"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+									],
+									"target": "other"
+								}
+							}
+						]
+					}
+				]
+			},
+			"ride_other": {
+				"sequence": [
+					{
+						"condition": "query.block_property('hell:block_rotation') == 5",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair_2 ~ ~ ~",
+										"tp @e[family=stool_npc,c=1] ~ ~ ~ 90"
+									],
+									"target": "self"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 2",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair_2 ~ ~ ~"
+									],
+									"target": "self"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 4",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair_2 ~ ~ ~",
+										"tp @e[family=stool_npc,c=1] ~ ~ ~ 270"
+									],
+									"target": "self"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('hell:block_rotation') == 3",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"summon hell:chair_2 ~ ~ ~",
+										"tp @e[family=stool_npc,c=1] ~ ~ ~ 180"
+									],
+									"target": "self"
+								}
+							}
+						]
+					}
+				]
+			},
+			"rotate": {
+				"set_block_property": {
+					"hell:block_rotation": "query.cardinal_facing_2d"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('hell:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

@@ -5,9 +5,31 @@
 			"identifier": "hell:young_barkeep_1",
 			"is_spawnable": true,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+			"animations": {
+				"locate_stool": "animation.barkeep_locate_stool"
+			},
+			"scripts": {
+				"animate": [
+					"locate_stool"
+				]
+			}
 		},
-		"component_groups": {},
+		"component_groups": {
+			"hell:locate_stool": {
+				"minecraft:behavior.move_to_block": {
+					"priority": 0,
+					"start_chance": 1,
+					"stay_duration": 2,
+					"speed_multiplier": 0.4,
+					"search_range": 10,
+					"target_blocks": [
+						"hell:tavern_path"
+					],
+					"target_selection_method": "random"
+				}
+			}
+		},
 		"components": {
 			"minecraft:type_family": {
 				"family": [
@@ -70,16 +92,6 @@
 			"minecraft:behavior.random_look_around": {
 				"priority": 9
 			},
-			"minecraft:behavior.move_to_block": {
-				"priority": 0,
-				"start_chance": 1,
-				"stay_duration": 2,
-				"speed_multiplier": 0.4,
-				"search_range": 10,
-				"target_blocks": [
-					"hell:tavern_path"
-				]
-			},
 			"minecraft:physics": {},
 			"minecraft:pushable": {
 				"is_pushable": false,
@@ -135,6 +147,13 @@
 						"dialogue open @e[type=hell:young_barkeep_1,c=1] @s[tag=young_barkeep_1_has_extra_info,c=1] young_barkeep_1_after_extra"
 					],
 					"target": "other"
+				}
+			},
+			"locate_stool": {
+				"add": {
+					"component_groups": [
+						"hell:locate_stool"
+					]
 				}
 			}
 		}

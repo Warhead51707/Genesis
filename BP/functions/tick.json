@@ -2,6 +2,7 @@
 	"values": [
 		"main/hunger_removal",
 		"main/accessory_scoreboards",
-		"main/start"
+		"main/start",
+		"misc/anti_shoplift"
 	]
 }

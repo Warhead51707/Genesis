@@ -1,0 +1,21 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "hell:test"
+		},
+		"tags": [
+			"workbench"
+		],
+		"ingredients": [
+			{
+				"count": 3,
+				"item": "minecraft:dirt"
+			}
+		],
+		"result": {
+			"item": "minecraft:dried_kelp",
+			"count": 1
+		}
+	}
+}

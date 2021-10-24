@@ -18,7 +18,7 @@
                     {
                         "name": "History?",
                         "commands": [
-                            "/say Placeholder"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_history"
                         ]
                     },
                     {
@@ -57,7 +57,7 @@
                     {
                         "name": "History?",
                         "commands": [
-                            "/say Placeholder"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_history"
                         ]
                     },
                     {
@@ -71,7 +71,7 @@
             {
                 "scene_tag": "young_barkeep_1_extra_info",
                 "npc_name": "William",
-                "text": "Well. As I told you previously, my name is William, Willam Beckett and my father he owns this Tavern. I won't make you go on a meaningless quest, but I have heard some commotion of a 'Magical Force' threatening the throne. I would tell you more but you'd have to ask one of the Vanguards.",
+                "text": "Well. As I told you previously, my name is William, Willam Hilith and my father he owns this Tavern. I won't pester you any further, but I have heard some commotion of a 'Evil Presence' threatening the throne. I would tell you more but you'd have to ask one of the Vanguards.",
                 "buttons": [
                     {
                         "name": "Thanks.",
@@ -100,14 +100,49 @@
                     {
                         "name": "History?",
                         "commands": [
-                            "/say Placeholder"
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_history"
                         ]
                     },
                     {
                         "name": "Vanguards?",
                         "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_vanguard_info"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "young_barkeep_1_vanguard_info",
+                "npc_name": "William",
+                "text": "Ah yes! The Vanguards... You really havn't been here before, have you? Well, the Vanguards are a faction that hold control over this town and many others. The Vanguards are seperated from the throne and created to stand up against the evils that we unleashed into this world.",
+                "buttons": [
+                    {
+                        "name": "Buy Ale (3H)",
+                        "commands": [
+                            "/function NPC/young_barkeep_1/ale_buy"
+                        ]
+                    },
+                    {
+                        "name": "History?",
+                        "commands": [
+                            "/dialogue open @e[type=hell:young_barkeep_1] @initiator[c=1] young_barkeep_1_history"
+                        ]
+                    },
+                    {
+                        "name": "Unleashed?",
+                        "commands": [
                             "/say Placeholder"
                         ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "young_barkeep_1_history",
+                "npc_name": "William",
+                "text": "The town's name is Folkengarde. Small town. We're here for business, not long term living. When my father was young, he came here to become wealthy. Now.... he's become psychotic. Folkengarde is under control by the Vanguards, those ornate soldiers you may have seen around town.",
+                "buttons": [
+                    {
+                        "name": "Thanks."
                     }
                 ]
             }

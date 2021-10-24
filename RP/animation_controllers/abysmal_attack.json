@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.abymal_attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "variable.attack_time"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"animations": [
+						"attack"
+					]
+				}
+			}
+		}
+	}
+}

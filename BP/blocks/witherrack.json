@@ -12,6 +12,7 @@
 			"minecraft:explosion_resistance": 9999,
 			"minecraft:loot": "loot_tables/empty.json",
 			"minecraft:friction": 0.5
-		}
+		},
+		"events": {}
 	}
 }

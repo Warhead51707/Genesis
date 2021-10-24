@@ -1,0 +1,175 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:stool_1",
+			"properties": {
+				"hell:stool": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:geometry": "geometry.stool",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stool",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					11,
+					12
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					11,
+					12
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "ride",
+				"target": "self"
+			},
+			"minecraft:on_player_placing": {
+				"condition": "query.is_sneaking",
+				"event": "switch_state"
+			},
+			"minecraft:ticking": {
+				"looping": false,
+				"range": [
+					0.01,
+					0.01
+				],
+				"on_tick": {
+					"event": "ride_other",
+					"target": "self"
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "construction"
+			}
+		},
+		"events": {
+			"ride": {
+				"sequence": [
+					{
+						"condition": "query.block_property('hell:stool') == 1",
+						"run_command": {
+							"command": [
+								"summon hell:stool ~ ~ ~",
+								"fill ~ ~1 ~ ~ ~1 ~ hell:tavern_path 0 replace air"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"condition": "query.block_property('hell:stool') == 1",
+						"run_command": {
+							"command": [
+								"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"condition": "!query.block_property('hell:stool')",
+						"run_command": {
+							"command": [
+								"summon hell:stool ~ ~-0.3 ~"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"condition": "!query.block_property('hell:stool')",
+						"run_command": {
+							"command": [
+								"ride @s start_riding @e[family=stool,c=1] teleport_rider"
+							],
+							"target": "other"
+						}
+					}
+				]
+			},
+			"switch_state": {
+				"set_block_property": {
+					"hell:stool": 1
+				}
+			},
+			"ride_other": {
+				"sequence": [
+					{
+						"condition": "query.block_property('hell:stool') == 1",
+						"run_command": {
+							"command": [
+								"summon hell:stool_2~ ~-0.5 ~"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"condition": "!query.block_property('hell:stool')",
+						"run_command": {
+							"command": [
+								"summon hell:stool_2 ~ ~-0.7 ~"
+							],
+							"target": "self"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('hell:stool') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.tall_stool",
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							14,
+							12
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							14,
+							12
+						]
+					}
+				}
+			}
+		]
+	}
+}

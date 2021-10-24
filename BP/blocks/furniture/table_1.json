@@ -1,5 +1,5 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.17.20",
 	"minecraft:block": {
 		"description": {
 			"identifier": "hell:table_1",
@@ -28,6 +28,21 @@
 			"minecraft:on_interact": {
 				"event": "state_switch",
 				"condition": "query.is_sneaking"
+			},
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					16,
+					14,
+					16
+				]
 			}
 		},
 		"events": {

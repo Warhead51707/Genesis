@@ -2,15 +2,19 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.arcane_skull.idle": {
-			"animation_length": 116.371,
+			"loop": true,
 			"bones": {
 				"head": {
-					"position": [0, "+16+math.cos(query.anim_time * 120 ) * 10", 0]
+					"position": [
+						0,
+						"10+math.cos(query.anim_time * 50 ) * 5",
+						0
+					]
 				}
 			},
 			"particle_effects": {
-				"116.36": {
-					"effect": "minecraft:conduit_particle",
+				"0.0": {
+					"effect": "basic",
 					"locator": "locator"
 				}
 			}

@@ -1,6 +1,6 @@
 #This function is for game setup. DO NOT TOUCH IF YOU DONT UNDERSTAND THIS!
 gamerule commandblockoutput false
-#gamerule sendcommandfeedback true
+gamerule sendcommandfeedback true
 scoreboard objectives add mana dummy mana
 scoreboard objectives add fire dummy fire
 scoreboard objectives add s_pouch dummy s_pouch

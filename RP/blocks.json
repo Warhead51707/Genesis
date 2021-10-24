@@ -33,5 +33,14 @@
 	},
 	"hell:mini_table": {
 		"sound": "wood"
+	},
+	"hell:stool_2": {
+		"sound": "wood"
+	},
+	"hell:chair_1": {
+		"sound": "wood"
+	},
+	"hell:book_1": {
+		"sound": "wood"
 	}
 }

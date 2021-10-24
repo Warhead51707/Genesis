@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.common_humanoid",
+				"identifier": "geometry.common_humanoid_female",
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
@@ -153,12 +153,12 @@
 					"cubes": [
 						{
 							"origin": [
-								-8,
+								-7,
 								12,
 								-2
 							],
 							"size": [
-								4,
+								3,
 								12,
 								4
 							],
@@ -189,12 +189,12 @@
 					"cubes": [
 						{
 							"origin": [
-								-8,
+								-7,
 								12,
 								-2
 							],
 							"size": [
-								4,
+								3,
 								12,
 								4
 							],
@@ -222,7 +222,7 @@
 								-2
 							],
 							"size": [
-								4,
+								3,
 								12,
 								4
 							],
@@ -258,7 +258,7 @@
 								-2
 							],
 							"size": [
-								4,
+								3,
 								12,
 								4
 							],

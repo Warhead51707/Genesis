@@ -1,0 +1,16 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.barkeep_locate_stool": {
+			"timeline": {
+				"0.0": [
+					"/event entity @s locate_stool",
+					"/scoreboard players add @s chair_counter 1",
+					"/function dev/stool_locate_reset"
+				]
+			},
+			"animation_length": 5,
+			"loop": true
+		}
+	}
+}

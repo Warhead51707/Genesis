@@ -8,44 +8,17 @@
 				"texture_height": 32,
 				"visible_bounds_width": 2,
 				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [
-					0,
-					0.75,
-					0
-				]
+				"visible_bounds_offset": [0, 0.75, 0]
 			},
 			"bones": [
 				{
 					"name": "head",
-					"pivot": [
-						0,
-						0,
-						0
-					],
+					"pivot": [0, 0, 0],
 					"cubes": [
-						{
-							"origin": [
-								-4,
-								0,
-								-4
-							],
-							"size": [
-								8,
-								8,
-								8
-							],
-							"uv": [
-								0,
-								0
-							]
-						}
+						{"origin": [-4, 0, -4], "size": [8, 8, 8], "uv": [0, 0]}
 					],
 					"locators": {
-						"locator": [
-							0,
-							-1,
-							0
-						]
+						"locator": [0, -1, 0]
 					}
 				}
 			]

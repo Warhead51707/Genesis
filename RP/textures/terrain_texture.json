@@ -33,6 +33,15 @@
 		},
 		"mini_table": {
 			"textures": "textures/blocks/mini_table"
+		},
+		"stool_2": {
+			"textures": "textures/blocks/stool_2"
+		},
+		"chair": {
+			"textures": "textures/blocks/chair"
+		},
+		"book_1": {
+			"textures": "textures/blocks/book_1"
 		}
 	}
 }

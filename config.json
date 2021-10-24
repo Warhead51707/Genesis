@@ -2,7 +2,7 @@
 	"type": "minecraftBedrock",
 	"name": "Genesis",
 	"namespace": "hell",
-	"targetVersion": "1.17.0",
+	"targetVersion": "1.17.20",
 	"description": "Created by Warhead",
 	"packs": {
 		"behaviorPack": "./BP",

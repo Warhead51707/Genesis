@@ -1,5 +1,5 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.17.20",
 	"minecraft:block": {
 		"description": {
 			"identifier": "hell:sign_1"
@@ -15,7 +15,10 @@
 				}
 			},
 			"minecraft:destroy_time": 9999,
-			"minecraft:explosion_resistance": 9999
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:creative_category": {
+				"category": "construction"
+			}
 		}
 	}
 }

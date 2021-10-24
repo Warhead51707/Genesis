@@ -14,7 +14,8 @@
 					"texture": "tavern_path"
 				}
 			},
-			"minecraft:unit_cube": {}
+			"minecraft:unit_cube": {},
+			"minecraft:entity_collision": false
 		}
 	}
 }

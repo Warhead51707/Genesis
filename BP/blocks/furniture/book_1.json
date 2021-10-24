@@ -1,0 +1,109 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hell:book_1",
+			"properties": {
+				"hell:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 9999,
+			"minecraft:explosion_resistance": 9999,
+			"minecraft:breathability": "air",
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-6
+				],
+				"size": [
+					8,
+					3,
+					11
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-6
+				],
+				"size": [
+					8,
+					3,
+					11
+				]
+			},
+			"minecraft:geometry": "geometry.book_1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "book_1",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotate",
+				"target": "self"
+			}
+		},
+		"events": {
+			"rotate": {
+				"set_block_property": {
+					"hell:block_rotation": "query.cardinal_facing_2d"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('hell:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('hell:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

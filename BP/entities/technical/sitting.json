@@ -1,0 +1,237 @@
+{
+	"format_version": "1.17.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:sitting",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"properties": {
+				"hell:stool_varient": {
+					"values": [
+						"stool",
+						"stool2",
+						"chair",
+						"chair2"
+					]
+				}
+			},
+			"aliases": {
+				"hell:stool": {
+					"hell:stool_varient": "stool"
+				},
+				"hell:stool_2": {
+					"hell:stool_varient": "stool2"
+				},
+				"hell:chair": {
+					"hell:stool_varient": "chair"
+				},
+				"hell:chair_2": {
+					"hell:stool_varient": "chair2"
+				}
+			},
+			"animations": {
+				"stool_despawn_animation": "animation.stool_despawn"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"stool_despawn_animation": "!query.has_rider && query.varient != 1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"hell:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"stool"
+				]
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:health": {
+				"max": 0.5,
+				"value": 0.5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:block_sensor": {
+				"sensor_radius": 0.5,
+				"on_break": [
+					{
+						"block_list": [
+							"hell:stool_1",
+							"hell:stool_2",
+							"hell:chair_1"
+						],
+						"on_block_broken": "hell:stool_despawn"
+					}
+				]
+			},
+			"minecraft:rideable": {
+				"seats": [
+					{
+						"position": [
+							-0.02,
+							0.01,
+							-0.2
+						]
+					}
+				],
+				"seat_count": 1,
+				"family_types": [
+					"player",
+					"NPC"
+				],
+				"pull_in_entities": true,
+				"rider_can_interact": false
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.actor_property('hell:stool_varient') == 'stool'",
+				"components": {
+					"minecraft:rideable": {
+						"seats": [
+							{
+								"position": [
+									-0.02,
+									0.25,
+									-0.2
+								]
+							}
+						],
+						"seat_count": 1,
+						"family_types": [
+							"player",
+							"NPC"
+						],
+						"pull_in_entities": true,
+						"rider_can_interact": false
+					}
+				}
+			},
+			{
+				"condition": "query.actor_property('hell:stool_varient') == 'stool2'",
+				"components": {
+					"minecraft:rideable": {
+						"seats": [
+							{
+								"position": [
+									-0.02,
+									0.25,
+									0
+								]
+							}
+						],
+						"seat_count": 1,
+						"family_types": [
+							"NPC"
+						],
+						"pull_in_entities": true,
+						"rider_can_interact": false
+					},
+					"minecraft:type_family": {
+						"family": [
+							"stool_npc"
+						]
+					},
+					"minecraft:variant": {
+						"value": 1
+					}
+				}
+			},
+			{
+				"condition": "query.actor_property('hell:stool_varient') == 'chair'",
+				"components": {
+					"minecraft:rideable": {
+						"seats": [
+							{
+								"position": [
+									0,
+									0.06,
+									-0.15
+								]
+							}
+						],
+						"seat_count": 1,
+						"family_types": [
+							"player",
+							"NPC"
+						],
+						"pull_in_entities": false,
+						"rider_can_interact": false
+					}
+				}
+			},
+			{
+				"condition": "query.actor_property('hell:stool_varient') == 'chair2'",
+				"components": {
+					"minecraft:rideable": {
+						"seats": [
+							{
+								"position": [
+									0,
+									-0.36,
+									-0.15
+								]
+							}
+						],
+						"seat_count": 1,
+						"family_types": [
+							"NPC"
+						],
+						"pull_in_entities": false,
+						"rider_can_interact": false
+					},
+					"minecraft:type_family": {
+						"family": [
+							"stool_npc"
+						]
+					},
+					"minecraft:variant": {
+						"value": 1
+					}
+				}
+			}
+		],
+		"events": {
+			"hell:stool_despawn": {
+				"add": {
+					"component_groups": [
+						"hell:despawn"
+					]
+				},
+				"run_command": {
+					"command": [
+						"fill ~ ~ ~ ~ ~4 ~ air 0 replace hell:tavern_path"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"run_command": {
+					"command": [
+						"say Genesis"
+					]
+				}
+			},
+			"hell:test": {
+				"set_actor_property": {
+					"hell:stool_varient": 2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hell:abysmal",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/abysmal"
+			},
+			"geometry": {
+				"default": "geometry.abysmal"
+			},
+			"animations": {
+				"move_arms": "animation.abysmal.bob_arms",
+				"move_legs": "animation.abysmal.bob_legs",
+				"attack": "animation.abysmal.attack",
+				"general": "animation.abysmal.general",
+				"attack_controller": "controller.animation.abymal_attack"
+			},
+			"scripts": {
+				"animate": [
+					"general",
+					"move_legs",
+					"move_arms",
+					"attack_controller"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {},
+			"enable_attachables": false
+		}
+	}
+}

@@ -1,0 +1,1 @@
+tellraw @a {"rawtext":[{"text": "Stool locate attempt - §e"},{"score":{"name":"@s","objective":"chair_counter"}}]}

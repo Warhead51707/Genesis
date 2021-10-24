@@ -1,8 +1,8 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.17.20",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hell:stool_1",
+			"identifier": "hell:stool_2",
 			"properties": {
 				"hell:stool": [
 					0,
@@ -16,7 +16,7 @@
 			"minecraft:geometry": "geometry.stool",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "stool",
+					"texture": "stool_2",
 					"render_method": "alpha_test"
 				}
 			},
@@ -54,16 +54,8 @@
 				"condition": "query.is_sneaking",
 				"event": "switch_state"
 			},
-			"minecraft:ticking": {
-				"looping": false,
-				"range": [
-					0.01,
-					0.01
-				],
-				"on_tick": {
-					"event": "ride_other",
-					"target": "self"
-				}
+			"minecraft:creative_category": {
+				"category": "construction"
 			}
 		},
 		"events": {
@@ -83,7 +75,7 @@
 						"condition": "query.block_property('hell:stool') == 1",
 						"run_command": {
 							"command": [
-								"ride @s start_riding @e[type=hell:stool,c=1] teleport_rider"
+								"ride @s start_riding @e[family=stool,c=1] teleport_rider"
 							],
 							"target": "other"
 						}
@@ -101,7 +93,7 @@
 						"condition": "!query.block_property('hell:stool')",
 						"run_command": {
 							"command": [
-								"ride @s start_riding @e[type=hell:stool,c=1] teleport_rider"
+								"ride @s start_riding @e[family=stool,c=1] teleport_rider"
 							],
 							"target": "other"
 						}
@@ -119,7 +111,7 @@
 						"condition": "query.block_property('hell:stool') == 1",
 						"run_command": {
 							"command": [
-								"summon hell:stool_other ~ ~-0.5 ~"
+								"summon hell:stool_2 ~ ~-0.5 ~"
 							],
 							"target": "self"
 						}
@@ -128,7 +120,7 @@
 						"condition": "!query.block_property('hell:stool')",
 						"run_command": {
 							"command": [
-								"summon hell:stool_other ~ ~-0.7 ~"
+								"summon hell:stool_2 ~ ~-0.7 ~"
 							],
 							"target": "self"
 						}

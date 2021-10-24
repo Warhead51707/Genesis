@@ -7,7 +7,7 @@
 		},
 		"components": {
 			"minecraft:display_name": {
-				"value": "H-Coin \n[§eCurrency§f]"
+				"value": "\ue108"
 			},
 			"minecraft:max_stack_size": 16,
 			"minecraft:creative_category": {
