@@ -16,15 +16,14 @@
 				"move_arms": "animation.abysmal.bob_arms",
 				"move_legs": "animation.abysmal.bob_legs",
 				"attack": "animation.abysmal.attack",
-				"general": "animation.abysmal.general",
-				"attack_controller": "controller.animation.abymal_attack"
+				"general": "animation.abysmal.general"
 			},
 			"scripts": {
 				"animate": [
 					"general",
 					"move_legs",
 					"move_arms",
-					"attack_controller"
+					"attack"
 				]
 			},
 			"render_controllers": [
