@@ -6,6 +6,11 @@ scoreboard objectives add fire dummy fire
 scoreboard objectives add s_pouch dummy s_pouch
 scoreboard objectives add currency dummy currency
 scoreboard objectives add temp1 dummy temp1
+scoreboard objectives add Communication dummy Communication
+scoreboard objectives add Morality dummy Morality
+scoreboard objectives add Town Rep dummy Town Rep
+
+
 
 #Dev - Will be removed in production build ;)
 scoreboard objectives add chair_counter dummy chair_counter
@@ -20,6 +25,9 @@ scoreboard players set @a[tag=!joined] fire 100
 scoreboard players set @a[tag=!joined] s_pouch 0
 scoreboard players set @a[tag=!joined] currency 16
 scoreboard players set @a[tag=!joined] temp1 0
+scoreboard players set @a[tag=!joined] Communication 0
+scoreboard players set @a[tag=!joined] Morality 100
+scoreboard players set @a[tag=!joined] Town Rep 100
 tag @a add joined
 
 #Mana UI logic (DEPRICATED)
