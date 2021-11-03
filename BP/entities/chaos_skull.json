@@ -1,0 +1,174 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hell:chaos_skull",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"animations": {
+				"despawn_on_death": "animation.despawn_on_death"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"despawn_on_death": "query.health == 0"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"attacking": {
+				"minecraft:behavior.melee_attack": {
+					"priority": 0,
+					"speed_multiplier": 1.4
+				},
+				"minecraft:on_hurt_by_player": {
+					"event": "attempt_to_laugh",
+					"target": "self"
+				}
+			},
+			"laughing": {
+				"minecraft:is_stunned": {},
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "regeneration",
+							"amplifier": 1,
+							"duration": 3,
+							"visible": true
+						}
+					]
+				},
+				"minecraft:timer": {
+					"time": 3,
+					"time_down_event": {
+						"event": "attack",
+						"target": "self"
+					},
+					"looping": false
+				},
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"cause": "all",
+						"damage_multiplier": 0.4
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 35,
+				"max": 35
+			},
+			"minecraft:movement": {
+				"value": 0.1
+			},
+			"minecraft:flying_speed": {
+				"value": 0.12
+			},
+			"minecraft:can_fly": true,
+			"minecraft:physics": {},
+			"minecraft:breathable": {
+				"total_supply": 20,
+				"suffocate_time": 15
+			},
+			"minecraft:collision_box": {
+				"height": 0.4,
+				"width": 0.4
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:nameable": {},
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"chaos_skull",
+					"arcane"
+				]
+			},
+			"minecraft:pushable": {},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"entity_types": {
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "player"
+					}
+				}
+			},
+			"minecraft:attack": {
+				"damage": 5
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:navigation.hover": {
+				"can_path_from_air": true
+			},
+			"minecraft:behavior.random_hover": {
+				"priority": 1,
+				"interval": 1,
+				 "hover_height": [ 2, 3 ],
+				 "xz_dist": 10,
+				 "y_dist": 4
+			},
+			"minecraft:behavior.look_at_target": {
+				"priority": 0
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0.75
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"attacking"
+					]
+				}
+			},
+			"attempt_to_laugh": {
+				"randomize": [
+					{
+						"add": {
+							"component_groups": [
+								"laughing"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"attacking"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"weight": 3
+					}
+				]
+			},
+			"attack": {
+				"add": {
+					"component_groups": [
+						"attacking"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"laughing"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

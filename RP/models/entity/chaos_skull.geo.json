@@ -1,0 +1,62 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.chaos_skull",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 4, 0],
+					"locators": {
+						"emitter": [0, 3, 0]
+					}
+				},
+				{
+					"name": "top",
+					"parent": "head",
+					"pivot": [0, 2, 2],
+					"cubes": [
+						{
+							"origin": [-4, 2, -2],
+							"size": [8, 6, 6],
+							"uv": {
+								"north": {"uv": [6, 6], "uv_size": [8, 6]},
+								"east": {"uv": [0, 6], "uv_size": [6, 6]},
+								"south": {"uv": [20, 6], "uv_size": [8, 6]},
+								"west": {"uv": [14, 6], "uv_size": [6, 6]},
+								"up": {"uv": [6, 0], "uv_size": [8, 6]},
+								"down": {"uv": [14, 6], "uv_size": [8, -6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bottom",
+					"parent": "head",
+					"pivot": [0, 2, 2],
+					"cubes": [
+						{
+							"origin": [-3, 0, -2],
+							"size": [6, 2, 4],
+							"uv": {
+								"north": {"uv": [4, 17], "uv_size": [6, 2]},
+								"east": {"uv": [0, 17], "uv_size": [4, 2]},
+								"south": {"uv": [14, 17], "uv_size": [6, 2]},
+								"west": {"uv": [10, 17], "uv_size": [4, 2]},
+								"up": {"uv": [4, 13], "uv_size": [6, 4]},
+								"down": {"uv": [10, 17], "uv_size": [6, -4]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

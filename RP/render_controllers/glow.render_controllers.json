@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.emissive_default": {
+			"textures": [
+				"Texture.default"
+			],
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"ignore_lighting": true
+		}
+	}
+}

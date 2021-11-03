@@ -1,0 +1,52 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.chaos_skull": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target",
+						"fly"
+					],
+					"particle_effects": [
+						{
+							"effect": "chaos_aura",
+							"locator": "emitter"
+						}
+					],
+					"transitions": [
+						{"laughing": "query.is_stunned ? query.is_alive"},
+						{"dead": "!query.is_alive"}
+					]
+				},
+				"laughing": {
+					"animations": [
+						"laugh"
+					],
+					"particle_effects": [
+						{
+							"effect": "chaos_laughter",
+							"locator": "emitter"
+						}
+					],
+					"transitions": [
+						{"default": "!query.is_stunned"},
+						{"dead": "!query.is_alive"}
+					]
+				},
+				"dead": {
+					"animations": [
+						"dead"
+					],
+					"particle_effects": [
+						{
+							"effect": "chaos_dust",
+							"locator": "emitter"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "hell:chaos_skull",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/chaos_skull"
+			},
+			"geometry": {
+				"default": "geometry.chaos_skull"
+			},
+			"animations": {
+				"look_at_target": "animation.chaos_skull.look_at_target",
+				"laugh": "animation.chaos_skull.laugh",
+				"fly": "animation.chaos_skull.fly",
+				"setup": "controller.animation.chaos_skull",
+				"dead": "animation.chaos_skull.dead"
+			},
+			"scripts": {
+				"animate": [
+					"setup"
+				]
+			},
+			"particle_effects": {
+				"chaos_aura": "hell:chaos_aura",
+				"chaos_laughter": "hell:chaos_laughter",
+				"chaos_dust": "hell:chaos_dust"
+			},
+			"render_controllers": [
+				"controller.render.emissive_default"
+			],
+			"spawn_egg": {
+				"base_color": "#66ff82",
+				"overlay_color": "#0d944a"
+			}
+		}
+	}
+}

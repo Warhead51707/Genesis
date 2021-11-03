@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.despawn_on_death": {
+			"timeline": {
+				"0.0": [
+					"@s despawn"
+				]
+			},
+			"animation_length": 0.1
+		}
+	}
+}

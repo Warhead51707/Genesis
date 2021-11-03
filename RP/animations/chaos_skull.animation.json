@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.chaos_skull.laugh": {
+			"loop": true,
+			"bones": {
+				"top": {
+					"rotation": ["-20 + math.cos(query.anim_time*720)*-20", 0, 0]
+				},
+				"bottom": {
+					"rotation": ["20 + math.cos(query.anim_time*720)*20", 0, 0]
+				}
+			}
+		},
+		"animation.chaos_skull.fly": {
+			"loop": true,
+			"bones": {
+				"top": {
+					"rotation": ["-5 + math.cos(query.anim_time*360)*-5", 0, 0]
+				},
+				"bottom": {
+					"rotation": ["5 + math.cos(query.anim_time*360)*5", 0, 0]
+				}
+			}
+		},
+		"animation.chaos_skull.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.chaos_skull.dead": {
+			"loop": true,
+			"bones": {
+				"top": {
+					"scale": 0
+				},
+				"bottom": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}
